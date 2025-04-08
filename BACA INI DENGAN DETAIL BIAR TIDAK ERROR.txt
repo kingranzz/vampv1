@@ -1,0 +1,19 @@
+WAJIB UNTUK DI BACA
+
+PEMBUAT SCRIPT TRAZ INVICTUS ADALAH
+@kipopLecy
+
+Dan Satu Tolong Harga In Pembuat Script 🙏
+
+Biar Run Bot Berjalan Mulu Alangkah Baik Nya Kita Berdoa Terlebih Dahulu 
+Jika Sudah Selanjutnya Adalah masuk https://t.me/VillainScInfo Ke Channel Developer Biar Mendapatkan Informasi Terbaru Terkait Script Villain
+Selanjutnya Adalah
+- Kalian Harus mempunyai Panel / Server buat run sc
+- Jika Ada kalian upload file di Panel / Server Bagian Files
+- Jika Sudah Upload File Maka Selanjutnya Adalah
+- Pergi Ke config.js, lalu isi Dengan Sesuai Yang Telah Di Kasih Arahan
+- Pergi Ke Startup Lalu Ke Start Command
+- Ubah Isi Di Dalam Start Command 
+- Dari Nya Yang Ini ( npm start ) 
+- Jadi Seperti Ini ( node index.js ) 
+- Udh Semua Tinggal Run Aja dah
