@@ -1120,12 +1120,7 @@ async function VampOri(target) {
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 50; i++) {
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
+    for (let i = 0; i <= 5; i++) {
     await VampBroadcast(target, mention = true)
     }
 
@@ -1624,7 +1619,15 @@ bot.onText(/\/delay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 20; i++) { // Kirim 3 kali langsung
+        await VampDelayInvis(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await VampDelayInvis(formatedNumber);
         await VampDelayInvis(formatedNumber);
         await VampDelayInvis(formatedNumber);
     }
