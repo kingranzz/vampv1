@@ -46,36 +46,6 @@ setInterval(() => {
   updateMenuBot();
 }, 1000);
 
-async function fetchValidTokens() {
-  try {
-    const response = await axios.get(GITHUB_TOKEN_LIST_URL);
-    return response.data.tokens; // Asumsikan format JSON: { "tokens": ["TOKEN1", "TOKEN2", ...] }
-  } catch (error) {
-    console.error(chalk.red("LU SIAPA NGENTOT!!!\nTOKEN LU GAK ADA DI DATABASE:", error.message));
-    return [];
-  }
-}
-
-const GITHUB_TOKEN_LIST_URL = "https://raw.githubusercontent.com/VampireP6D/LalapoDB/refs/heads/main/LalapoPrivate.json"; // Ganti dengan URL GitHub yang benar
-
-async function validateToken() {
-  console.log(chalk.blue("Loading Check Token Bot..."));
-
-  const validTokens = await fetchValidTokens();
-  if (!validTokens.includes(BOT_TOKEN)) {
-    console.log(chalk.red("❌ Token Tidak Di Terima Oleh Bot!!!"));
-    process.exit(1);
-  }
-
-  console.log(chalk.green("Token Anda Di Kenali Vampire!!!"));
-  startBot();
-}
-
-function startBot() {
-  console.log(chalk.green("Token Kamu Sudah Di Confirm Oleh Vampire!!!"));
-}
-
-validateToken();
 
 let sock;
 let whatsappStatus = false;
