@@ -1536,7 +1536,7 @@ bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
     // Kirim notifikasi awal dengan gambar
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/wfhaut.webp", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━━┓
 ┃ Mᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ...
 ┃ Bᴏᴛ sᴇᴅᴀɴɢ ᴏᴘᴇʀᴀsɪ ᴘᴇɴɢɪʀɪᴍᴀɴ ʙᴜɢ
@@ -1609,13 +1609,13 @@ bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /vampbeta
-┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 3 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
+┃〢 Cᴏᴍᴍᴀɴᴅ : /hardelay
+┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
