@@ -1745,6 +1745,54 @@ bot.onText(/\/delay(?:\s(.+))?/, async (msg, match) => {
     for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
         await delayByGizz(formatedNumber);
         await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
