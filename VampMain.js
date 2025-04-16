@@ -1525,12 +1525,12 @@ bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /vampbeta 62×××.");
+        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /hardelay 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /vampbeta 62×××.");
+        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /hardelay 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
