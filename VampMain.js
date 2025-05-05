@@ -2993,7 +2993,7 @@ bot.on("callback_query", async (callbackQuery) => {
                         [
                             {
                                 text: "〢𝐂𝐨𝐧𝐭𝐚𝐜𝐭",
-                                url: "https://t.me/Vampiresagara"
+                                url: "https://t.me/ranzcolld"
                             }
                         ]
                     ]
@@ -3004,9 +3004,9 @@ bot.on("callback_query", async (callbackQuery) => {
             
  𝘉 𝘜 𝘎 - 𝘚 𝘌 𝘓 𝘌 𝘊 𝘛 𝘐 𝘖 𝘕
 ──────────────────────────
-#- RanzDelayMention
-▢ /delaymention 628xxx
-╰➤ Bug ini akan mengakibatkan target delay dan tidak bisa mengirim chat dengan leluasa, keuntungan bug ini invisible ( tidak terlihat di hp target ) jadi bebas bug sepuasnya tanpa takut ketahuan atau diblokir
+#- RanzBulldozer
+▢ /bull 628xxx
+╰➤ Bug ini akan mengakibatkan target delay dan tidak bisa mengirim chat dengan leluasa, keuntungan bug ini invisible ( tidak terlihat di hp target ) jadi bebas bug sepuasnya tanpa takut ketahuan atau diblokir dan keuntungan bug ini nyedot kuota (16mb/detik)
 
 #- RanzBugForceClose
 ▢ /forceclose 628xxx
