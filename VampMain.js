@@ -940,8 +940,6 @@ async function VampireNewUi(target, Ptcp = true) {
         console.log(err);
       }
     }
-    
-> `//Protocolbug6 Delay Invis`
 
 async function protocolbug6(target, mention) {
   const quotedMessage = {
@@ -2489,8 +2487,9 @@ bot.onText(/\/proto6(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
-        await VampBeta(formatedNumber);
+    for (let i = 0; i < 500; i++) { // Kirim 3 kali langsung
+        await protocolbug6(formatedNumber);
+        await sleep(3000)
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
