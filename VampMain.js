@@ -2048,7 +2048,7 @@ bot.onText(/\/bugmenu/, (msg) => {
   const senderName = msg.from.username ? `@${msg.from.username}` : `${senderId}`;
   const now = new Date();
   const tanggal = `${now.getDate()} - ${now.toLocaleString('id-ID', { month: 'long' })} - ${now.getFullYear()}`;
-  let ligma = ``\`\`\`
+  let ligma = `\`\`\`
 ╭━━━『 R A N Z ✦ C R A S H E R S 』━━━━
 │
 │➼ Nᴀᴍᴇ : ${senderName}
