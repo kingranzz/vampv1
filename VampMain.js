@@ -2066,7 +2066,7 @@ bot.onText(/\/bugmenu/, (msg) => {
 │ 
 ╰═════════════════❀
 
-- © 𝐑𝐚𝐧𝐳𝐢𝐬𝐆𝐎𝐎𝐃 ᯤ`\`\`\``;
+- © 𝐑𝐚𝐧𝐳𝐢𝐬𝐆𝐎𝐎𝐃 ᯤ\`\`\``;
   bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
       caption: ligma,
       reply_markup: {
