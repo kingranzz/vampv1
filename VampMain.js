@@ -2803,8 +2803,8 @@ bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
     });
 
     while (true) {
-        await VampSuperDelay(formatedNumber);
-        await new Promise((resolve) => setTimeout(resolve, 2500));
+        await protocolbug2(formatedNumber);
+        await new Promise((resolve) => setTimeout(resolve, 3000));
         console.log(chalk.red("Send Bug Succes"))
     }
 
