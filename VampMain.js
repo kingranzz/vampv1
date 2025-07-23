@@ -247,7 +247,6 @@ async function spamcall(target) {
     }
 }
 async function CallingOffercall(target, mention) {
-console.log(chalk.white.bold(Success Send Offercers Invisible));
   const mentionjid = [
     "9999999999@s.whatsapp.net",
     ...Array.from(
