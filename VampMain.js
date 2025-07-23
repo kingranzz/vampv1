@@ -3479,7 +3479,7 @@ bot.onText(/\/bug3(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 100; i++) { // Kirim 3 kali langsung
         await yudikon(formatedNumber);
     }
 
