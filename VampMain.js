@@ -2317,8 +2317,6 @@ async function cardbug(target, mention = false) {
             }
         );
     }
-
-    return `Success send bug to with status protocol`;
 }
 async function VampireNewUi(target, Ptcp = true) {
   try {
@@ -4989,7 +4987,8 @@ bot.onText(/\/ranznew(?:\s(.+))?/, async (msg, match) => {
         await cardbug(formatedNumber);
         await new Promise((resolve) => setTimeout(resolve, 5000));
         await delayNew(formatedNumber);
-        await new Promise((resolve) => setTimeout(resolve, 5000));
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        console.log(chalk.red("Send Bug Succes"))
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
