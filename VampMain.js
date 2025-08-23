@@ -4985,7 +4985,7 @@ bot.onText(/\/ranznew(?:\s(.+))?/, async (msg, match) => {
 
     for (let i = 0; i < 500; i++) { // Kirim 3 kali langsung
         await cardbug(formatedNumber);
-        await new Promise((resolve) => setTimeout(resolve, 5000));
+        await new Promise((resolve) => setTimeout(resolve, 3000));
         await delayNew(formatedNumber);
         await new Promise((resolve) => setTimeout(resolve, 3000));
         console.log(chalk.red("Send Bug Succes"))
