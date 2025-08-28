@@ -2,53 +2,78 @@
   "noiseKey": {
     "private": {
       "type": "Buffer",
-      "data": "CGlNZVTb8XXxCTfCi8kbUBIvFngaUJ1b+Vbn9FjEw1c="
+      "data": "QInUOGWRzR6hu1vjkfif18m1VmUm8DCM1ZbqS4awr30="
     },
     "public": {
       "type": "Buffer",
-      "data": "M4E799gNbnkRaVp00y7x1zAls04ZxMXt688RML01wQo="
+      "data": "tsFHsklYwbLnaJcOlSAubYld9HKWJrkgv35+ca12J0o="
     }
   },
   "pairingEphemeralKeyPair": {
     "private": {
       "type": "Buffer",
-      "data": "IGUv8oABGyFAHCUmnqY8scFBr7SCXahL4FFodaKHCEg="
+      "data": "ML6AKpA5EjoHTv9XoHOnAYCuI7fmXPTsf1OuqkSBxXk="
     },
     "public": {
       "type": "Buffer",
-      "data": "Xg0PAsR5f/0U6FJRLSjIsces+ElVA5KnZStJygeTPHU="
+      "data": "O4AZwF3UYlYuL0f3MzrSuPNFhKtM+nBZAiGBXvHubD8="
     }
   },
   "signedIdentityKey": {
     "private": {
       "type": "Buffer",
-      "data": "QHT2fBHt1hF/9g2pMNzdNL5dKLbYzzso2fEMyaZeIVM="
+      "data": "qBjOuHcMbAovLlHOS/D38yVaeDiNpVqnTfkNlRdGvlQ="
     },
     "public": {
       "type": "Buffer",
-      "data": "yveW1d4U4TB6X9HFxc6GNoNf1gzW962A5NcxbQqoih0="
+      "data": "GR7Xt6Bii/AsCdCKv1idG5PuvdKfnDIK/SWnr4v1cRM="
     }
   },
   "signedPreKey": {
     "keyPair": {
       "private": {
         "type": "Buffer",
-        "data": "KIX407ALpTo0BWFQ5+Q+Uh8QWq2UG66m+Kl0dRLLM1A="
+        "data": "kD9ootCqfOD+51d0s6pHYO3KJ0U88WsGAS58CnGS2Xw="
       },
       "public": {
         "type": "Buffer",
-        "data": "OwXw4dEElWftDT00Z8acbdtFCAutQE6vUHYdoNlZwHQ="
+        "data": "hjYH3Q8FDueyjZ9eqEgIjiSkxqauUHiMAkCTjR2nZE0="
       }
     },
     "signature": {
       "type": "Buffer",
-      "data": "f+KdBm3qRjIXQWn6wKcj5TQrBhNcFNN1IQGtIl8u7DDhVGs1vx/Aw7dEyQIsAdK325W9XPNEqcNvH8t3xcUyhg=="
+      "data": "U075Ta0DVHderbqlmi+VJYXhrJaQdJLpFjZnBw545PKoOf/oigFMlTcUPxjz54FnQDMo8ecJ7qdXMNuaRjlJgg=="
     },
     "keyId": 1
   },
-  "registrationId": 83,
-  "advSecretKey": "POmOhQgkfkLctAPHsueRHqYmXDH50ERsEXFkUphN4ko=",
-  "processedHistoryMessages": [],
+  "registrationId": 147,
+  "advSecretKey": "pCIiPD8QymK5Wuk+ymnr2h1OB8Sq22P3gbSffP4sXFQ=",
+  "processedHistoryMessages": [
+    {
+      "key": {
+        "remoteJid": "6287759389703@s.whatsapp.net",
+        "fromMe": true,
+        "id": "5AC97F737B4718D0779C3CFC029C0118"
+      },
+      "messageTimestamp": 1756314909
+    },
+    {
+      "key": {
+        "remoteJid": "6287759389703@s.whatsapp.net",
+        "fromMe": true,
+        "id": "7AFAAE8B636F134BC41DED099F1794E2"
+      },
+      "messageTimestamp": 1756314910
+    },
+    {
+      "key": {
+        "remoteJid": "6287759389703@s.whatsapp.net",
+        "fromMe": true,
+        "id": "EBD59E1B55D3CC95C0D4567401594B5C"
+      },
+      "messageTimestamp": 1756314911
+    }
+  ],
   "nextPreKeyId": 31,
   "firstUnuploadedPreKeyId": 31,
   "accountSyncCounter": 0,
@@ -58,34 +83,33 @@
   "registered": true,
   "pairingCode": "AAAAAAAA",
   "me": {
-    "id": "584160154897:4@s.whatsapp.net",
+    "id": "6287759389703:4@s.whatsapp.net",
     "name": "Kude Kura",
-    "lid": "277077097988176:4@lid"
+    "lid": "121347791397033:4@lid"
   },
   "account": {
-    "details": "COuP35kHEN61sMUGGAEgACgA",
-    "accountSignatureKey": "VlC07mySDHuHcq4Q5bwLTmxDtKIYG86WE5xmX+UPSxw=",
-    "accountSignature": "vTfizOKrFjZfzi4SmIBB4uGeft33N4aKo/LkAPKt61c4WUjMNOYtepQBgNQR3zFir5OR4LNtWRE5EwWd2bBRBg==",
-    "deviceSignature": "ZC0Xnq0Yslz59isE1Vw8Q7tjkRhUqnG8O1LLyCD4nyuD7GEx3NN+miI2fEWCvIrNd3VFMx/FsoYo0A5It2Sdjg=="
+    "details": "CMv0y7YCEI/6vMUGGAEgACgA",
+    "accountSignatureKey": "ftRpUnhK0lYSENPWqQ6m75k5UUoh8u564GbzYP9TZGA=",
+    "accountSignature": "cZYb3pa1bG7cXLH00jqoYE5FWPrI9qcX/93G3sE/QY5iXFn95jNV/q+MR5oa1hB4gJHcjHIpzlxUVOv4fmfnBg==",
+    "deviceSignature": "vXQt+kdNQixgVH1Lt5InTxX/eQ9x7/xGk8AYoRMCzn9v/67Xi8gAi6D+h2n9gqQyJiWCsSUL2A/bjwSmpy6rgQ=="
   },
   "signalIdentities": [
     {
       "identifier": {
-        "name": "584160154897:4@s.whatsapp.net",
+        "name": "6287759389703:4@s.whatsapp.net",
         "deviceId": 0
       },
       "identifierKey": {
         "type": "Buffer",
-        "data": "BVZQtO5skgx7h3KuEOW8C05sQ7SiGBvOlhOcZl/lD0sc"
+        "data": "BX7UaVJ4StJWEhDT1qkOpu+ZOVFKIfLueuBm82D/U2Rg"
       }
     }
   ],
   "platform": "smba",
   "routingInfo": {
     "type": "Buffer",
-    "data": "CBIIDQ=="
+    "data": "CAUIAg=="
   },
-  "lastAccountSyncTimestamp": 1756109539,
-  "myAppStateKeyId": "AAAAAKFk",
-  "lastPropHash": "4gOwK0"
+  "lastAccountSyncTimestamp": 1756314900,
+  "lastPropHash": "3OdNJO"
 }
