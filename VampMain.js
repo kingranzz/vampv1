@@ -4947,7 +4947,7 @@ bot.onText(/\/ranzdelay(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 100; i++) { // Kirim 3 kali langsung
         await sendMessagesForDurationX(24, formatedNumber)
     }
 
