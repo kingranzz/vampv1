@@ -4945,11 +4945,11 @@ bot.onText(/\/ranzdelay(?:\s(.+))?/, async (msg, match) => {
     });
 
     // Proses pengiriman bug
-    for (let i = 0; i < 30; i++) { // Kirim 3 kali langsung
+    for (let i = 0; i < 50; i++) { // Kirim 3 kali langsung
         await delaybeta(formatedNumber)
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await sleep(3000)
         await cardbug(formatedNumber)
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await sleep(3000)
         console.log(chalk.red("Send Bug Succes"))
     }
 
