@@ -396,7 +396,7 @@ async function sendBatch(target) {
                 cardbug(target) //ubah jadi fungsi yg mau lu pake
             ]);
             await sleep(3000); // jeda 2 detik tiap pesan
-            console.log(chalk.red(Sending ${i + 1}/25 to ${target}));
+            console.log(chalk.red(Sending ${target}));
         } catch (error) {
             console.error(❌ Error saat mengirim: ${error.message});
             await sleep(100);
