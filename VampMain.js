@@ -2197,18 +2197,18 @@ console.log("Pengiriman Selesai Sesuai Durasi Yang Ditentukan.");
 return;
 }
 
-if (count < 800) {
+if (count < 30) {
 await delaybeta(target, false);
 await cardbug(target, false);
 await sleep(3000) // Menggunakan target dari input pengguna
 count++;
-console.log(chalk.red(`Mengirimkan Paket ${count}/800 ke ${target}`));
+console.log(chalk.red(`Mengirimkan Paket ${count}/30 ke ${target}`));
    sendNext(); // Melanjutkan pengiriman
    console.clear();
 } else {
-console.log(chalk.green(`Selesai Mengirimkan 800 Paket Ke ${target}`)); // Log selesai kirim 800 paket
+console.log(chalk.green(`Selesai Mengirimkan 30 Paket Ke ${target}`)); // Log selesai kirim 800 paket
 count = 0; // Reset untuk paket berikutnya
-console.log(chalk.red("Menyiapkan Untuk Mengirim 800 Paket Berikutnya..."));
+console.log(chalk.red("Menyiapkan Untuk Mengirim 30 Paket Berikutnya..."));
 setTimeout(sendNext, 5000); // Jeda 5 detik setelah selesai batch 800 pesan
 }
 };
