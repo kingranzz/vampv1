@@ -55,7 +55,7 @@ let venomModsData = JSON.stringify({
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const owner = global.owner;
 const ONLY_FILE = "only.json";
-const cooldowns = new Map();
+const cd = "cooldown.json";
 const axios = require('axios');
 const BOT_TOKEN = global.botToken; // Kalau token ada di VampireConfig.js
 const startTime = new Date(); // Waktu mulai online
@@ -99,6 +99,60 @@ function shouldIgnoreMessage(msg) {
   if (!isOnlyGroupEnabled()) return false;
   return msg.chat.type === "private";
 }
+
+// ~ Coldowwn
+
+let cooldownData = fs.existsSync(cd)
+  ? JSON.parse(fs.readFileSync(cd))
+  : { time: 5 * 60 * 1000, users: {} };
+
+function saveCooldown() {
+  fs.writeFileSync(cd, JSON.stringify(cooldownData, null, 2));
+}
+
+function checkCooldown(userId) {
+  if (cooldownData.users[userId]) {
+    const remainingTime =
+      cooldownData.time - (Date.now() - cooldownData.users[userId]);
+    if (remainingTime > 0) {
+      return Math.ceil(remainingTime / 1000);
+    }
+  }
+  cooldownData.users[userId] = Date.now();
+  saveCooldown();
+  setTimeout(() => {
+    delete cooldownData.users[userId];
+    saveCooldown();
+  }, cooldownData.time);
+  return 0;
+}
+
+function setCooldown(timeString) {
+  const match = timeString.match(/(\d+)([smh])/);
+  
+  if (!match) return "Format salah! Gunakan contoh: /setcooldown 5m";
+
+  let [_, value, unit] = match;
+  value = parseInt(value);
+
+  if (unit === "s") cooldownData.time = value * 1000;
+  else if (unit === "m") cooldownData.time = value * 60 * 1000;
+  else if (unit === "h") cooldownData.time = value * 60 * 60 * 1000;
+
+  saveCooldown();
+  return `Cooldown diatur ke ${value}${unit}`;
+}
+
+function isPremium(userId) {
+  const user = premiumUsers.find((user) => user.id === userId);
+  if (user) {
+    const now = moment();
+    const expirationDate = moment(user.expiresAt);
+    return now.isBefore(expirationDate);
+  }
+  return false;
+}
+
 
 // Fungsi untuk menghitung durasi online dalam format jam:menit:detik
 function getOnlineDuration() {
@@ -2197,18 +2251,18 @@ console.log("Pengiriman Selesai Sesuai Durasi Yang Ditentukan.");
 return;
 }
 
-if (count < 30) {
+if (count < 20) {
 await delaybeta(target, false);
 await cardbug(target, false);
-await sleep(3000) // Menggunakan target dari input pengguna
+await sleep(4000) // Menggunakan target dari input pengguna
 count++;
-console.log(chalk.red(`Mengirimkan Paket ${count}/30 ke ${target}`));
+console.log(chalk.red(`Mengirimkan Paket ${count}/20 ke ${target}`));
    sendNext(); // Melanjutkan pengiriman
    console.clear();
 } else {
-console.log(chalk.green(`Selesai Mengirimkan 30 Paket Ke ${target}`)); // Log selesai kirim 800 paket
+console.log(chalk.green(`Selesai Mengirimkan 20 Paket Ke ${target}`)); // Log selesai kirim 800 paket
 count = 0; // Reset untuk paket berikutnya
-console.log(chalk.red("Menyiapkan Untuk Mengirim 30 Paket Berikutnya..."));
+console.log(chalk.red("Menyiapkan Untuk Mengirim 20 Paket Berikutnya..."));
 setTimeout(sendNext, 5000); // Jeda 5 detik setelah selesai batch 800 pesan
 }
 };
@@ -4727,7 +4781,6 @@ bot.onText(/\/toolsjdjfjcmenu/, (msg) => {
 ╭──────「 𝐓𝐨𝐨𝐥𝐬 𝐌𝐞𝐧𝐮 」───────╮
 │➩ /fixedbug <Num>
 │➩ /encrypthard <Tag File>
-│➩ /cooldown <Num>
 ╰──────────────────────╯
 `;
   bot.sendPhoto(chatId, "https://files.catbox.moe/ecepcb.jpg", {
@@ -4917,12 +4970,22 @@ bot.onText(/\/ranhddzunli(?:\s(.+))?/, async (msg, match) => {
 bot.onText(/\/ranzdelay(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
+    const userId = msg.from.id;
+    const cooldown = checkCooldown(userId);
     
     if (shouldIgnoreMessage(msg)) return;
 
     if (!whatsappStatus) {
         return bot.sendMessage(chatId, "❌ Harap Hubungkan Nomor WhatsApp Anda.");
     }
+    
+    if (cooldown > 0) {
+    return bot.sendMessage(
+      chatId,
+      `Tunggu ${cooldown} detik sebelum mengirim pesan lagi.`
+    );
+  }
+  
     if (!premiumUsers.includes(senderId)) {
         return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
     }
