@@ -4644,7 +4644,7 @@ async function callbug(target) {
     await spamcall(target);
   }
 }
-bot.onText(/\/stjdjdjdjart/, (msg) => {
+bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const senderName = msg.from.username ? `@${msg.from.username}` : `${senderId}`;
