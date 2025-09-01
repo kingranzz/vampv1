@@ -4967,7 +4967,7 @@ bot.onText(/\/ranhddzunli(?:\s(.+))?/, async (msg, match) => {
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
     });
 });
-bot.onText(/\/ranzdelay(?:\s(.+))?/, async (msg, match) => {
+bot.onText(/\/ranzd1(?:\s(.+))?/, async (msg, match) => {
     const senderId = msg.from.id;
     const chatId = msg.chat.id;
     const userId = msg.from.id;
@@ -4982,7 +4982,7 @@ bot.onText(/\/ranzdelay(?:\s(.+))?/, async (msg, match) => {
     if (cooldown > 0) {
     return bot.sendMessage(
       chatId,
-      `Tunggu ${cooldown} detik sebelum mengirim pesan lagi.`
+      `Tunggu ${cooldown} detik sebelum mengirim pesan lagi kntl.`
     );
   }
   
