@@ -4684,7 +4684,7 @@ bot.onText(/\/start/, (msg) => {
       }
   });
 });
-bot.onText(/\/bugmgvbbenu/, (msg) => {
+bot.onText(/\/ping/, (msg) => {
   const chatId = msg.chat.id;
   const senderId = msg.from.id;
   const senderName = msg.from.username ? `@${msg.from.username}` : `${senderId}`;
@@ -4699,16 +4699,6 @@ bot.onText(/\/bugmgvbbenu/, (msg) => {
 │➼ Sᴛᴀᴛᴜs : ${whatsappStatus ? "Premium" : "No Access"}
 │➼ Oɴʟɪɴᴇ : ${getOnlineDuration()}
 │➼ Tᴀɴɢɢᴀʟ : ${tanggal}
-│
-│   ⚘ BUG MENU ⚘
-│ 
-│ ❀ /ranzdelay <number>
-│ ❀ /- <number> 
-│ ❀ /- <number>
-│ ❀ /- <number>
-│ ❀ /- <number>
-│ ❀ 
-│ 
 ╰═════════════════❀
 
 - © 𝐑𝐚𝐧𝐳𝐢𝐬𝐆𝐎𝐎𝐃 ᯤ\`\`\``;
@@ -5448,11 +5438,11 @@ bot.on("callback_query", async (callbackQuery) => {
 │
 │   ⚘ BUG MENU ⚘
 │ 
-│ ❀ /ranzdelay <number>
-│ ❀ /- <number> 
-│ ❀ /- <number>
-│ ❀ /- <number>
-│ ❀ /- <number>
+│ ❀ /ranzd1 <number>
+│ ❀ /ranzd2 <number>
+│ ❀ /ranzd3 <number>
+│ ❀ /ranzd4 <number>
+│ ❀ 
 │ 
 ╰═════════════════❀
 `;
