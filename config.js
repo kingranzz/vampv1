@@ -1,8 +1,8 @@
 module.exports = {
     
-    ownerId: 8219845021, // ID LU
+    ownerId: 5965707646, // ID LU
     
-    telegramBotToken: "8136946939:AAHiZTZyXDywVJ57Ar028D8O0V5zymmRt6o", // TOKEN LU
+    telegramBotToken: "7350299617:AAErmJwSbIxzTqPgP8L4URBX1O6BVqpTa1Y", // TOKEN LU
 
     sessionName: "session",
 
