@@ -16,7 +16,7 @@
 
   "dependencies": {
 
-    "@whiskeysockets/baileys": "npm:@rexxhayanasi/elaina-bail@latest",
+    "@whiskeysockets/baileys": "npm:@yupra/baileys@latest",
 
     "axios": "^1.12.2",
 
